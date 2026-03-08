@@ -11,283 +11,6 @@
   <!-- GOOGLE FONT -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- <style>
-    /* GLOBAL */
-    *{margin:0;padding:0;box-sizing:border-box;}
-    body{
-      font-family:sans-serif;
-      background:#0f1424;
-      color:#fff;
-      /* line-height:1.6; */
-    }
-    a{text-decoration:none;color:inherit;}
-    img{max-width:100%;display:block;}
-
-    /* CONTAINER */
-    .container{
-      max-width:1200px;
-      margin:auto;
-      padding:50px 20px;
-    }
-
-    /* HEADER */
-    header.main-navbar{
-      /* display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:15px 40px;
-      background:rgba(10,15,30,0.95);
-      position:sticky;
-      top:0;
-      z-index:1000; */
-    }
-    /* header .logo{
-      display:flex;
-      align-items:center;
-      gap:10px;
-    }
-    header .logo img{
-      width:40px;
-      height:40px;
-      object-fit:contain;
-    }
-    header .nav-links a{
-      margin:0 15px;
-      font-weight:600;
-      transition:0.3s;
-    }
-    header .nav-links a:hover,
-    header .nav-links a.active{
-      color:#22d3ff;
-    } */
-
-    /* HERO / INTRO */
-    .about-hero{
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-      padding:60px 20px;
-      background:linear-gradient(to right,#0f1424,#1b2238);
-      border-radius:16px;
-      margin-bottom:50px;
-    }
-    .about-hero h1{
-      font-size:3rem;
-      color:#22d3ff;
-      margin-bottom:20px;
-    }
-    .about-hero p{
-      font-size:1.2rem;
-      color:#b8c1d9;
-      max-width:800px;
-    }
-
-    /* SECTIONS */
-    section{
-      margin-bottom:60px;
-    }
-    section h2{
-      font-size:2rem;
-      color:#22d3ff;
-      margin-bottom:25px;
-      text-align:center;
-    }
-    section p{
-      color:#b8c1d9;
-      max-width:900px;
-      margin:auto;
-      text-align:center;
-      margin-bottom:30px;
-    }
-
-    /* VISION / MISSION */
-    .vision-mission{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:30px;
-    }
-    .vision-mission .card{
-      background:#1b2238;
-      padding:30px;
-      border-radius:16px;
-      flex:1 1 300px;
-      max-width:400px;
-      text-align:center;
-      transition:0.3s;
-      display: flex;
-      flex-direction: column;
-    }
-    .vision-mission .card:hover{
-      transform:translateY(-10px);
-      box-shadow:0 10px 30px rgba(34,211,255,0.3);
-    }
-    .vision-mission .card i{
-      font-size:3rem;
-      color:#22d3ff;
-      margin-bottom:15px;
-    }
-    .vision-mission .card h3{
-      font-size:1.5rem;
-      margin-bottom:10px;
-    }
-    .vision-mission .card p{
-      font-size:1rem;
-      color:#b8c1d9;
-    }
-
-    /* TEAM */
-    .team{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:30px;
-    }
-    .team .member{
-      background:#1b2238;
-      padding:20px;
-      border-radius:16px;
-      text-align:center;
-      flex:1 1 200px;
-      max-width:250px;
-      transition:0.3s;
-    }
-    .team .member:hover{
-      transform:translateY(-8px);
-      box-shadow:0 10px 30px rgba(34,211,255,0.3);
-    }
-    .team .member img{
-      width:120px;
-      height:120px;
-      object-fit:cover;
-      border-radius:50%;
-      margin-bottom:15px;
-    }
-    .team .member i{
-      font-size: 50px;
-      /* width:120px; */
-      /* height:120px; */
-      object-fit:cover;
-      /* border-radius:50%;
-      margin-bottom:15px; */
-    }
-    .team .member h4{
-      font-size:1.2rem;
-      color:#22d3ff;
-      margin-bottom:5px;
-    }
-    .team .member p{
-      font-size:0.95rem;
-      color:#b8c1d9;
-    }
-
-    /* FEATURES / WHY CHOOSE US */
-    .features{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:30px;
-    }
-    .features .feature-card{
-      background:#1b2238;
-      padding:25px;
-      border-radius:16px;
-      text-align:center;
-      flex:1 1 200px;
-      max-width:250px;
-      transition:0.3s;
-    }
-    .features .feature-card:hover{
-      transform:translateY(-8px);
-      box-shadow:0 10px 30px rgba(34,211,255,0.3);
-    }
-    .features .feature-card i{
-      font-size:2.5rem;
-      color:#22d3ff;
-      margin-bottom:12px;
-    }
-    .features .feature-card h4{
-      font-size:1.2rem;
-      margin-bottom:8px;
-    }
-    .features .feature-card p{
-      font-size:0.95rem;
-      color:#b8c1d9;
-    }
-
-    /* CTA */
-    .cta{
-      text-align:center;
-      margin-top:30px;
-    }
-    .cta button{
-      padding:12px 25px;
-      font-size:1rem;
-      font-weight:bold;
-      background:#22d3ff;
-      color:#11162a;
-      border:none;
-      border-radius:10px;
-      cursor:pointer;
-      transition:0.3s;
-    }
-    .cta button:hover{
-      background:#1ab7e3;
-    }
-
-    /* FOOTER */
-    /* footer.site-footer{
-      background:#11162a;
-      color:#b8c1d9;
-      padding:40px 20px;
-    }
-    footer .footer-container{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:space-between;
-      gap:20px;
-      max-width:1200px;
-      margin:auto;
-    }
-    footer h4,h3{
-      color:#22d3ff;
-      margin-bottom:15px;
-    }
-    footer p, footer li{
-      font-size:0.95rem;
-      color:#b8c1d9;
-    }
-    footer ul{
-      list-style:none;
-      padding:0;
-    }
-    footer ul li a{
-      color:#b8c1d9;
-      transition:0.3s;
-    }
-    footer ul li a:hover{
-      color:#22d3ff;
-    }
-    .social-icons a{
-      display:inline-block;
-      margin-right:10px;
-      color:#b8c1d9;
-      transition:0.3s;
-      font-size:1.2rem;
-    }
-    .social-icons a:hover{
-      color:#22d3ff;
-    } */
-
-    /* RESPONSIVE */
-    @media(max-width:900px){
-      .vision-mission, .team, .features{
-        flex-direction:column;
-        align-items:center;
-      }
-    }
-  </style> -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 <link rel="stylesheet" href="main.css">
 <!-- AOS CSS -->
@@ -389,19 +112,19 @@
 
 
   <!-- HERO -->
-  <div class="container about-hero"  data-aos="fade-up">
+  <div class="container about-hero" style="display: flex; flex-direction: column;"  data-aos="fade-up">
     <h1>About GearNix</h1>
     <p>Your ultimate destination for gaming gear and tech. Quality products, fast delivery, and trusted by gamers worldwide.</p>
   </div>
 
   <!-- OUR STORY -->
-  <section class="container"  data-aos="fade-up" >
+  <section class="container" style="display: flex; flex-direction: column;"  data-aos="fade-up" >
     <h2>Our Story</h2>
     <p>GearNix was founded to provide gamers and tech enthusiasts with the best gear at affordable prices. Our mission is to combine quality, speed, and trust in every product we deliver.</p>
   </section>
 
   <!-- VISION & MISSION -->
-  <section class="container"  data-aos="fade-up">
+  <section class="container" style="display: flex; flex-direction: column;"  data-aos="fade-up">
     <h2>Vision & Mission</h2>
     <div class="vision-mission">
       <div class="card">
@@ -418,7 +141,7 @@
   </section>
 
   <!-- TEAM -->
-  <section class="container"  data-aos="fade-up">
+  <section class="container" style="display: flex; flex-direction: column;"  data-aos="fade-up">
     <h2>Meet the Team</h2>
     <div class="team">
       <div class="member"  data-aos="fade-up">
@@ -455,7 +178,7 @@
   </section>
 
   <!-- WHY CHOOSE US -->
-  <section class="container"  data-aos="fade-up">
+  <section class="container" style="display: flex; flex-direction: column;"  data-aos="fade-up">
     <h2>Why Choose Us</h2>
     <div class="features">
       <div class="feature-card"  data-aos="fade-up">
