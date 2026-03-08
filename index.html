@@ -1,0 +1,2182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link rel="stylesheet" href="main.css">
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+    <style>
+        
+       
+
+    </style>
+</head>
+<body>
+    
+<!-- NAVBAR -->
+<header class="main-navbar"  data-aos="fade-down">
+  <!-- LEFT: Logo -->
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+    <!-- <span>NexaTech Store</span> -->
+  </div>
+
+  <!-- CENTER: Nav Links -->
+  <nav class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="product.html">Products</a>
+    <a href="brands.html">Brands</a>
+    <a href="compare.html">Compare</a>
+    <!-- <a href="checkout.html">Check out</a> -->
+    <a href="about.html">About</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+
+  <!-- RIGHT: Icons -->
+  <div class="nav-icons">
+    <!-- SEARCH -->
+    <div class="search-wrapper">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" placeholder="Search products..." id="searchInput" class="search-input">
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+
+    <!-- HEART / Wishlist -->
+    <div class="icon-wrapper">
+      <i class="fa-regular fa-heart heart-icon"></i>
+      <span class="nav-badge heart-count">0</span>
+    </div>
+
+    <!-- CART -->
+    <div class="icon-wrapper">
+      <i class="fa-solid fa-cart-shopping cart-icon"></i>
+      <span class="nav-badge cart-count">0</span>
+    </div>
+
+   
+
+    <span class="login" id="loginBtn">
+      <i class="fa-solid fa-circle-user"></i>
+      <span id="login-name">My Account</span>
+    </span>
+    <span id="logoutBtn" style="cursor: pointer; "> <i class="fas fa-sign-out"></i></span>
+
+    <!-- MOBILE TOGGLE -->
+  </div>
+  <i class="fa-solid fa-bars mobile-toggle"></i>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <!-- Close button -->
+  <i class="fa-solid fa-xmark close-mobile" id="closeMobile"></i>
+
+  <!-- Top: Profile + Search -->
+  <div class="mobile-top">
+    <div class="mobile-profile">
+      <!-- <i class="fa-solid fa-circle-user"></i>
+      <span id="login-name">My Account</span> -->
+      <span class="mobile-login" id="mobileLoginBtn">
+        <i class="fa-solid fa-circle-user"></i>
+        <span class="mobile-login-name">My Account</span>
+      </span>
+      </span>
+    </div>
+    
+    <div class="mobile-search">
+      <input type="text" placeholder="Search products...">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+
+  <!-- Nav Links -->
+  <nav class="mobile-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="product.html">Products</a>
+    <a href="compare.html">Compare</a>
+    <a href="About">Check out</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+
+  <!-- Bottom: Logout -->
+  <div class="mobile-logout">
+    <i class="fas fa-sign-out"></i>
+    <span>Logout</span>
+  </div>
+</div>
+    <section class="hero" data-aos="fade-up">
+        <!-- LEFT : SLIDER -->
+        <div class="hero-slider">
+          
+          <div class="slide active" style="background-image:url('images/banner/banner\ \(10\).jfif')">
+            <div class="slide-content">
+              <h1>Gamming Laptops</h1>
+              <p>Upgrade your gaming experience</p>
+            </div>
+          </div>
+      
+          <div class="slide" style="background-image:url('images/banner/banner\ \(4\).jfif')">
+            <div class="slide-content">
+              <h1>Samsung S25 Ultra</h1>
+              <p>Feel every sound clearly</p>
+            </div>
+          </div>
+      
+          <div class="slide" style="background-image:url('images/banner/banner\ \(12\).jfif')">
+            <div class="slide-content">
+              <h1>Huawei Nova 5T</h1>
+              <p>Fast response & durability</p>
+            </div>
+          </div>
+          <div class="slide" style="background-image:url('images/banner/banner.jfif')">
+            <div class="slide-content">
+              <h1>Headset Pro</h1>
+              <p>Fast response & durability</p>
+            </div>
+          </div>
+          <div class="slide" style="background-image:url('images/banner/banner\ \(1\).jfif')">
+            <div class="slide-content">
+              <h1>Samsung S53 Ultra pro</h1>
+              <p>Fast response & durability</p>
+            </div>
+          </div>
+          
+        </div>
+      
+        <!-- RIGHT : CARDS -->
+        <div class="hero-cards" >
+          
+          <a href="product.html">
+            <div class="card">
+            <div class="card-text">
+              <h3>Samsung Galaxy S24 Ultra Violet</h3>
+              <p>High precision control</p>
+            </div>
+            <img src="images/samsung/samsung (1).png" alt="">
+          </div>
+         </a>
+      
+          <a href="product.html">
+            <div class="card">
+            <div class="card-text">
+              <h3>Gaming Headset</h3>
+              <p>Surround sound</p>
+            </div>
+            <img src="images/headset/gamming headset.png" alt="">
+          </div>
+        </a>
+          <a href="product.html">
+            <div class="card">
+            <div class="card-text">
+              <h3>Gaming Headset</h3>
+              <p>Surround sound</p>
+            </div>
+            <img src="images/watch/Apple Watch Series 9 (1).png" alt="">
+          </div>
+        </a>
+        </div>
+      </section>
+      <section class="happy-store-section" data-aos="fade-up">
+
+        <h2 class="section-title">Trusted by Gamers Worldwide</h2>
+        <p class="section-subtitle">Thousands of happy customers trust GearNix for quality tech products.</p>
+      
+        <div class="happy-container">
+      
+          <div class="happy-card">
+            <i class="fa-solid fa-users"></i>
+            <h3 class="counter" data-target="15000">0</h3>
+            <p>Happy Customers</p>
+          </div>
+      
+          <div class="happy-card">
+            <i class="fa-solid fa-box"></i>
+            <h3 class="counter" data-target="32000">0</h3>
+            <p>Orders Delivered</p>
+          </div>
+      
+          <div class="happy-card">
+            <i class="fa-solid fa-star"></i>
+            <h3 class="counter" data-target="4.9">0</h3>
+            <p>Average Rating</p>
+          </div>
+      
+          <div class="happy-card">
+            <i class="fa-solid fa-globe"></i>
+            <h3 class="counter" data-target="25">0</h3>
+            <p>Countries Served</p>
+          </div>
+      
+        </div>
+      
+      </section>
+
+      <!-- ================= Services Section ================= -->
+<section class="services-section" data-aos="fade-up">
+  <h2 class="section-title">Our Services</h2>
+  <p class="section-subtitle">We provide top-notch solutions for all your tech needs</p>
+
+  <div class="services-grid">
+    <div class="service-card" data-aos="fade-up">
+      <div class="service-icon">
+        <i class="fa-solid fa-truck-fast"></i>
+      </div>
+      <h3>Fast Delivery</h3>
+      <p>Get your products delivered quickly and safely right to your doorstep.</p>
+    </div>
+
+    <div class="service-card" data-aos="fade-up">
+      <div class="service-icon">
+        <i class="fa-solid fa-shield-halved"></i>
+      </div>
+      <h3>Secure Payment</h3>
+      <p>100% secure payments with multiple options including cards & wallets.</p>
+    </div>
+
+    <div class="service-card" data-aos="fade-up">
+      <div class="service-icon">
+        <i class="fa-solid fa-headset"></i>
+      </div>
+      <h3>24/7 Support</h3>
+      <p>Our support team is available round-the-clock to help you anytime.</p>
+    </div>
+
+    <div class="service-card" data-aos="fade-up">
+      <div class="service-icon">
+        <i class="fa-solid fa-rotate-left"></i>
+      </div>
+      <h3>Easy Returns</h3>
+      <p>Hassle-free returns and exchanges within 30 days of purchase.</p>
+    </div>
+  </div>
+</section>
+
+      <section class="brand-section">
+        <h1>Top Brands</h1>
+        <div class="brand-container">
+          <a href="brands.html?brand=Samsung" class="brand-card"  
+          data-brand="Samsung">
+            <div class="brand-logo">
+              <img src="images/samsung ChatGPT.png" alt="Samsung">
+            </div>
+            <span>Samsung</span>
+          </a>
+      
+          <a href="brands.html?brand=Apple" class="brand-card">
+            <div class="brand-logo">
+              <img src="images/apple brand1.png" alt="Apple">
+            </div>
+            <span>iPhone</span>
+          </a>
+      
+          <a href="brands.html?brand=Huawei" class="brand-card">
+            <div class="brand-logo">
+              <img src="images/huawei brand.png" alt="Huawei">
+            </div>
+            <span>Huawei</span>
+          </a>
+      
+          <a href="brands.html?brand=Sony" class="brand-card">
+            <div class="brand-logo">
+              <img src="images/hp/hp logp.png" alt="Sony">
+            </div>
+            <span>Hp</span>
+          </a>
+      
+          <a href="#" class="brand-card">
+            <div class="brand-logo">
+              <img src="images/dell/dell logo.png" alt="Huawei">
+            </div>
+            <span>Dell</span>
+          </a>
+        </div>
+      </section>
+
+
+  <!-- ================= Deals Section ================= -->
+<section class="deals-section" data-aos="fade-up">
+  <h2 class="section-title">🔥 Hot Deals</h2>
+  <p class="section-subtitle">Grab the best offers before they run out!</p>
+
+  <div class="deals-grid">
+
+    <!-- Gaming Mouse -->
+<div class="product-card" data-aos="fade-up"
+data-id="1"
+data-name="Razer Gaming Mouse"
+data-desc="Razer DeathAdder V2 – High-precision Gaming Mouse with Ergonomic Design"
+data-price="59"
+data-img="images/mouse/razer-deathadder.png"
+data-brand="Razer"
+data-category="Gaming Mouse"
+data-sku="RZ-DV2-001"
+data-warranty="2 Years"
+data-stock="In Stock">
+<div class="product-img-wrapper">
+<img src="images/gaming/mouse.png" alt="Razer Gaming Mouse">
+<span class="badge discount">50% OFF</span>
+<div class="icon-group">
+ <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+ <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+</div>
+</div>
+<div class="product-info">
+<h3 class="product-name">Razer Gaming Mouse</h3>
+<p class="desc">Razer DeathAdder V2 – High-precision Gaming Mouse with Ergonomic Design</p>
+<div class="rating">⭐⭐⭐⭐☆ <span>(98)</span></div>
+<div class="price">
+ <span class="current">$59</span> <del>$119</del>
+</div>
+<div class="countdown" data-end="2026-03-03T17:59:59"></div>
+</div>
+<div class="product-actions">
+<button class="add-to-cart-btn">
+ <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+</button>
+</div>
+</div>
+
+<!-- Gaming Headset -->
+<div class="product-card" data-aos="fade-up" 
+data-id="2"
+data-name="HyperX Gaming Headset"
+data-desc="HyperX Cloud II – Comfortable Gaming Headset with 7.1 Surround Sound"
+data-price="85"
+data-img="images/headset/hyperx-cloud2.png"
+data-brand="HyperX"
+data-category="Gaming Headset"
+data-sku="HX-CLD2-002"
+data-warranty="1 Year"
+data-stock="In Stock">
+<div class="product-img-wrapper">
+<img src="images/gaming/headset.png" alt="HyperX Gaming Headset">
+<span class="badge discount">40% OFF</span>
+<div class="icon-group">
+ <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+ <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+</div>
+</div>
+<div class="product-info">
+<h3 class="product-name">HyperX Gaming Headset</h3>
+<p class="desc">HyperX Cloud II – Comfortable Gaming Headset with 7.1 Surround Sound</p>
+<div class="rating">⭐⭐⭐⭐⭐ <span>(120)</span></div>
+<div class="price">
+ <span class="current">$85</span> <del>$140</del>
+</div>
+<div class="countdown" data-end="2026-03-05T23:59:59"></div>
+</div>
+<div class="product-actions">
+<button class="add-to-cart-btn">
+ <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+</button>
+</div>
+</div>
+
+<!-- Mechanical Keyboard -->
+<div class="product-card" data-aos="fade-up"
+data-id="3"
+data-name="Corsair Mechanical Keyboard"
+data-desc="Corsair K70 RGB – Mechanical Gaming Keyboard with Blue Switches"
+data-price="120"
+data-img="images/keyboard/corsair-k70.png"
+data-brand="Corsair"
+data-category="Mechanical Keyboard"
+data-sku="CR-K70-003"
+data-warranty="2 Years"
+data-stock="In Stock">
+<div class="product-img-wrapper">
+<img src="images/keyboard/teclado_mecânico-removebg-preview.png" alt="Corsair Mechanical Keyboard">
+<span class="badge discount">35% OFF</span>
+<div class="icon-group">
+ <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+ <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+</div>
+</div>
+<div class="product-info">
+<h3 class="product-name">Corsair Mechanical Keyboard</h3>
+<p class="desc">Corsair K70 RGB – Mechanical Gaming Keyboard with Blue Switches</p>
+<div class="rating">⭐⭐⭐⭐⭐ <span>(110)</span></div>
+<div class="price">
+ <span class="current">$120</span> <del>$185</del>
+</div>
+<div class="countdown" data-end="2026-03-07T23:59:59"></div>
+</div>
+<div class="product-actions">
+<button class="add-to-cart-btn">
+ <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+</button>
+</div>
+</div>
+
+<!-- Game Controller -->
+<div class="product-card" data-aos="fade-up"
+data-id="4"
+data-name="Xbox Wireless Controller"
+data-desc="Xbox Series X Controller – Ergonomic Wireless Game Controller for PC & Console"
+data-price="60"
+data-img="images/controller/xbox-controller.png"
+data-brand="Microsoft"
+data-category="Game Controller"
+data-sku="XB-CNTR-004"
+data-warranty="1 Year"
+data-stock="In Stock">
+<div class="product-img-wrapper">
+<img src="images/gaming-controller/controller.png" alt="Xbox Wireless Controller">
+<span class="badge discount">30% OFF</span>
+<div class="icon-group">
+ <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+ <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+</div>
+</div>
+<div class="product-info">
+<h3 class="product-name">Xbox Wireless Controller</h3>
+<p class="desc">Xbox Series X Controller – Ergonomic Wireless Game Controller for PC & Console</p>
+<div class="rating">⭐⭐⭐⭐☆ <span>(95)</span></div>
+<div class="price">
+ <span class="current">$60</span> <del>$85</del>
+</div>
+<div class="countdown" data-end="2026-03-09T23:59:59"></div>
+</div>
+<div class="product-actions">
+<button class="add-to-cart-btn">
+ <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+</button>
+</div>
+</div>
+
+    <!-- Copy more product cards and update data-end and discount -->
+    
+  </div>
+</section>
+
+<section class="feature-section" data-aos="fade-up">
+
+  <!-- LEFT TEXT -->
+  <div class="feature-text">
+    <h2>Ultimate Gaming Gear</h2>
+    <h4>Upgrade your setup</h4>
+    <p>Experience the best performance with our high-quality gaming accessories. Perfect for both beginners and pro players.</p>
+    <ul>
+      <li>High quality materials</li>
+      <li>Ergonomic design</li>
+      <li>Affordable prices</li>
+    </ul>
+    <!-- <button class="shop-btn"></button> -->
+    <a href="product.html"  class="shop-btn">Shop Now</a>
+  </div>
+
+  <!-- RIGHT IMAGE -->
+  <div class="feature-image">
+    <div class="feature-image">
+
+      <div class="image-frame">
+        <img src="images/ChatGPT Image Feb 4, 2026, 02_21_03 AM.png" id="big-image" alt="Big Product">
+      </div>
+    
+      
+    
+    </div>
+    <!-- SMALL IMAGES -->
+    <div class="small-images">
+      <img src="images/ali-bakhtiari-KHBxEH2cFB0-unsplash.jpg" class="thumb" alt="Thumb 1">
+      <img src="images/c-d-x-PDX_a_82obo-unsplash.jpg" class="thumb" alt="Thumb 2">
+      <img src="images/ChatGPT Image Feb 4, 2026, 02_21_03 AM.png" class="thumb" alt="Thumb 3">
+      <img src="images/ali-bakhtiari-KHBxEH2cFB0-unsplash.jpg" class="thumb" alt="Thumb 4">
+    </div>
+  </div>
+
+</section>
+
+      <section class="bestseller-section" data-aos="fade-up">
+        <h2 class="section-title">🔥 Top 10 Bestsellers of This Week</h2>
+        <p class="section-subtitle">
+          Explore the most popular products of this week. Trusted by gamers for quality, performance, and value.
+        </p>
+      
+        <div class="bestseller-grid">
+      
+         <div class="product-card" data-aos="fade-up"
+     data-id="5"
+     data-name="Razer Gaming Mouse"
+     data-desc="Razer DeathAdder V2 – High-precision Gaming Mouse with Ergonomic Design"
+     data-price="59"
+     data-img="images/mouse/razer-deathadder.png"
+     data-brand="Razer"
+     data-category="Gaming Mouse"
+     data-sku="RZ-DV2-001"
+     data-warranty="2 Years"
+     data-stock="In Stock">
+
+  <!-- IMAGE -->
+  <div class="product-img-wrapper">
+    <img src="images/gaming/mouse.png" alt="Razer Gaming Mouse">
+    <span class="badge">Hot</span>
+    <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+
+  <!-- PRODUCT INFO -->
+  <div class="product-info">
+    <h3 class="product-name">Razer Gaming Mouse</h3>
+    <p class="desc">Razer DeathAdder V2 – High-precision Gaming Mouse with Ergonomic Design</p>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(250)</span></div>
+    <div class="price">
+      <span class="current">$59</span> <del>$79</del>
+    </div>
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="product-actions">
+    <button class="add-to-cart-btn">
+      <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+    </button>
+  </div>
+
+</div>
+<div class="product-card" data-aos="fade-up"
+data-id="6"
+data-name="HP Pavilion Laptop"
+data-desc="HP Pavilion 15 – Intel i5 12th Gen, 16GB RAM, 512GB SSD, 15.6” Full HD Display"
+data-price="899"
+data-img="images/laptop/hp-pavilion.png"
+data-brand="HP"
+data-category="Laptop"
+data-sku="HP-PAV15-001"
+data-warranty="1 Year"
+data-stock="In Stock">
+
+<!-- IMAGE -->
+<div class="product-img-wrapper">
+<img src="images/hp/hp (3).png" alt="HP Pavilion Laptop">
+<span class="badge">Hot</span>
+<div class="icon-group">
+ <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+ <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+</div>
+</div>
+
+<!-- PRODUCT INFO -->
+<div class="product-info">
+<h3 class="product-name">HP Pavilion Laptop</h3>
+<p class="desc">HP Pavilion 15 – Intel i5 12th Gen, 16GB RAM, 512GB SSD, 15.6” Full HD Display</p>
+<div class="rating">⭐⭐⭐⭐☆ <span>(180)</span></div>
+<div class="price">
+ <span class="current">$899</span> <del>$999</del>
+</div>
+</div>
+
+<!-- ACTIONS -->
+<div class="product-actions">
+<button class="add-to-cart-btn">
+ <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+</button>
+</div>
+
+</div>
+<div class="product-card" data-aos="fade-up"
+     data-id="7"
+     data-name="HyperX Gaming Mic"
+     data-desc="HyperX QuadCast – USB Condenser Microphone for Streaming and Gaming"
+     data-price="120"
+     data-img="images/mic/hyperx-mic.png"
+     data-brand="HyperX"
+     data-category="Mic"
+     data-sku="HX-QC-001"
+     data-warranty="1 Year"
+     data-stock="In Stock">
+
+  <!-- IMAGE -->
+  <div class="product-img-wrapper">
+    <img src="images/mic/mic (1).png" alt="HyperX Gaming Mic">
+    <span class="badge">Hot</span>
+    <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+
+  <!-- PRODUCT INFO -->
+  <div class="product-info">
+    <h3 class="product-name">HyperX Gaming Mic</h3>
+    <p class="desc">HyperX QuadCast – USB Condenser Microphone for Streaming and Gaming</p>
+    <div class="rating">⭐⭐⭐⭐☆ <span>(95)</span></div>
+    <div class="price">
+      <span class="current">$120</span> <del>$149</del>
+    </div>
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="product-actions">
+    <button class="add-to-cart-btn">
+      <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+    </button>
+  </div>
+
+</div>         
+<div class="product-card" data-aos="fade-up"
+data-id="8"
+data-name="Logitech C920 Webcam"
+data-desc="Logitech C920 HD Pro – Full HD 1080p Webcam for Streaming & Video Calls"
+data-price="85"
+data-img="images/webcam/logitech-c920.png"
+data-brand="Logitech"
+data-category="Webcam"
+data-sku="LG-C920-001"
+data-warranty="1 Year"
+data-stock="In Stock">
+
+<!-- IMAGE -->
+<div class="product-img-wrapper">
+<img src="images/webcam/webcam (1).png" alt="Logitech C920 Webcam">
+<span class="badge">Hot</span>
+<div class="icon-group">
+ <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+ <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+</div>
+</div>
+
+<!-- PRODUCT INFO -->
+<div class="product-info">
+<h3 class="product-name">Logitech C920 Webcam</h3>
+<p class="desc">Logitech C920 HD Pro – Full HD 1080p Webcam for Streaming & Video Calls</p>
+<div class="rating">⭐⭐⭐⭐☆ <span>(150)</span></div>
+<div class="price">
+ <span class="current">$85</span> <del>$99</del>
+</div>
+</div>
+
+<!-- ACTIONS -->
+<div class="product-actions">
+<button class="add-to-cart-btn">
+ <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+</button>
+</div>
+
+</div>   
+<div class="product-card"  data-aos="fade-up"
+     data-id="9"
+     data-name="Samsung Gaming Monitor"
+     data-desc="Samsung 27-inch 144Hz Gaming Monitor – Smooth Gameplay Display with Crisp Colors"
+     data-price="250"
+     data-img="images/monitor/samsung-gaming-monitor.png"
+     data-brand="Samsung"
+     data-category="Monitor"
+     data-sku="SM-GM-009"
+     data-warranty="3 Years"
+     data-stock="In Stock">
+  
+  <div class="product-img-wrapper">
+    <img src="images/monitor/monitor (1).png" alt="Samsung Gaming Monitor">
+    <span class="badge">Hot</span>
+    <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+
+  <div class="product-info">
+    <h3 class="product-name">Samsung Gaming Monitor</h3>
+    <p class="desc">Samsung 27-inch 144Hz Gaming Monitor – Smooth Gameplay Display</p>
+    <div class="rating">⭐⭐⭐⭐☆ <span>(120)</span></div>
+    <div class="price">
+      <span class="current">$250</span> <del>$300</del>
+    </div>
+  </div>
+
+  <div class="product-actions">
+    <button class="add-to-cart-btn">
+      <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+    </button>
+  </div>
+</div>      
+
+<div class="product-card" data-aos="fade-up"
+     data-id="10"
+     data-name="Dell Inspiron Laptop"
+     data-desc="Dell Inspiron 15 – Intel i7, 16GB RAM, 512GB SSD, Full HD Display"
+     data-price="850"
+     data-img="images/laptop/dell-inspiron.png"
+     data-brand="Dell"
+     data-category="Laptop"
+     data-sku="DL-INSP-010"
+     data-warranty="2 Years"
+     data-stock="In Stock">
+
+  <div class="product-img-wrapper">
+    <img src="images/dell/dell (1).png" alt="Dell Inspiron Laptop">
+    <span class="badge">Hot</span>    <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+
+  <div class="product-info">
+    <h3 class="product-name">Dell Inspiron Laptop</h3>
+    <p class="desc">Dell Inspiron 15 – Intel i7, 16GB RAM, 512GB SSD, Full HD Display</p>
+    <div class="rating">⭐⭐⭐⭐☆ <span>(85)</span></div>
+    <div class="price">
+      <span class="current">$850</span> <del>$1000</del>
+    </div>
+  </div>
+
+  <div class="product-actions">
+    <button class="add-to-cart-btn">
+      <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+    </button>
+  </div>
+</div>
+
+<div class="product-card" data-aos="fade-up"
+     data-id="11"
+     data-name="JBL Bluetooth Speaker"
+     data-desc="JBL Flip 6 – Portable Waterproof Bluetooth Speaker with Powerful Sound"
+     data-price="120"
+     data-img="images/speaker/jbl-flip6.png"
+     data-brand="JBL"
+     data-category="Speaker"
+     data-sku="JBL-FLIP6-011"
+     data-warranty="1 Year"
+     data-stock="In Stock">
+
+  <div class="product-img-wrapper">
+    <img src="images/speakers/speaker (2).png" alt="JBL Bluetooth Speaker">
+    <span class="badge">Hot</span>
+      <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+
+  <div class="product-info">
+    <h3 class="product-name">JBL Bluetooth Speaker</h3>
+    <p class="desc">JBL Flip 6 – Portable Waterproof Bluetooth Speaker with Powerful Sound</p>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(145)</span></div>
+    <div class="price">
+      <span class="current">$120</span> <del>$160</del>
+    </div>
+  </div>
+
+  <div class="product-actions">
+    <button class="add-to-cart-btn">
+      <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+    </button>
+  </div>
+</div>
+
+<div class="product-card" data-aos="fade-up"
+     data-id="12"
+     data-name="Anker 4-Port USB Hub"
+     data-desc="Anker 4-Port USB 3.0 Hub – Expand Your Laptop/PC Connectivity with High-Speed Data Transfer"
+     data-price="25"
+     data-img="images/usb-hub/anker-4port.png"
+     data-brand="Anker"
+     data-category="USB Hub"
+     data-sku="ANK-USBH-012"
+     data-warranty="1 Year"
+     data-stock="In Stock">
+
+  <div class="product-img-wrapper">
+    <img src="images//usb hub/usb hub (1).png" alt="Anker 4-Port USB Hub">
+    <span class="badge discount">20% OFF</span>
+    <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+
+  <div class="product-info">
+    <h3 class="product-name">Anker 4-Port USB Hub</h3>
+    <p class="desc">Anker 4-Port USB 3.0 Hub – Expand Your Laptop/PC Connectivity with High-Speed Data Transfer</p>
+    <div class="rating">⭐⭐⭐⭐☆ <span>(75)</span></div>
+    <div class="price">
+      <span class="current">$25</span> <del>$32</del>
+    </div>
+  </div>
+
+  <div class="product-actions">
+    <button class="add-to-cart-btn">
+      <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+    </button>
+  </div>
+</div>
+
+        </div>
+      </section>
+
+      
+      
+<section class="review-section" data-aos="fade-up">
+  <h1 class="heading">Review</h1>
+  <div class="review-container">
+  <!-- BIG RATING CARD -->
+  <div class="review-card big-review" data-animate>
+    <h1>4.9</h1>
+    <p class="small-heading">Customer Rating</p>
+    <p class="based">Based on 5000+ Reviews</p>
+
+    <div class="progress">
+      <span>5 Star</span>
+      <div class="bar"><div class="fill" data-width="95%"></div></div>
+      <span>95%</span>
+    </div>
+
+    <div class="progress">
+      <span>4 Star</span>
+      <div class="bar"><div class="fill" data-width="80%"></div></div>
+      <span>80%</span>
+    </div>
+
+    <div class="progress">
+      <span>3 Star</span>
+      <div class="bar"><div class="fill" data-width="60%"></div></div>
+      <span>60%</span>
+    </div>
+  </div>
+
+  <!-- SMALL REVIEW CARDS -->
+  <div class="review-card tilt" data-animate>
+    <img src="images/review.jpg" alt="Ali Khan">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <h4>Ali Khan</h4>
+    <p>Excellent quality products and fast delivery. Highly recommended for gamers.</p>
+  </div>
+
+  <div class="review-card tilt" data-animate>
+    <img src="images/review3.jpg" alt="Sara Ahmed">
+    <div class="stars">⭐⭐⭐⭐☆</div>
+    <h4>Sara Ahmed</h4>
+    <p>Very satisfied with the service and pricing. Smooth shopping experience.</p>
+  </div>
+
+  <div class="review-card tilt" data-animate>
+    <img src="images/review1.jpg" alt="Usman Raza">
+    <div class="stars">⭐⭐⭐⭐⭐</div>
+    <h4>Usman Raza</h4>
+    <p>Best gaming store, highly recommended. Will shop again soon!</p>
+  </div>
+</div>
+</section>
+     
+
+<section class="arrival-section" data-aos="fade-up">
+
+  <div class="arrival-card" data-aos="fade-up">
+    <div class="arrival-text">
+      <span class="tag">New Arrival</span>
+      <h3>Gaming Headset X</h3>
+      <a href="products.html" class="shop-link">Shop Now →</a>
+    </div>
+    <img src="images/headset/gamming headset.png" alt="">
+  </div>
+
+  <div class="arrival-card" data-aos="fade-up">
+    <div class="arrival-text">
+      <span class="tag">New Arrival</span>
+      <h3>RGB Gaming Keyboard</h3>
+      <a href="products.html" class="shop-link">Shop Now →</a>
+    </div>
+    <img src="images/keyboard/teclado_mecânico-removebg-preview.png" alt="">
+  </div>
+
+</section>
+
+
+
+  <!-- Header -->
+  <div class="arrival-header" data-aos="fade-up">
+
+    <!-- LEFT: Category Heading -->
+    <h2 class="arrival-title" id="category-heading">New Arrival</h2>
+  
+    <!-- RIGHT: Links -->
+    <div class="arrival-nav">
+      <a href="#" class="active" data-category="all" data-title="New Arrival">All Products</a>
+      <a href="#" data-category="Laptop" data-title="Laptop">Laptop</a>
+      <a href="#" data-category="Smartphone" data-title="Smartphone">Smartphone</a>
+      <a href="#" data-category="Headset" data-title="Headset">Headset</a>
+  
+      <span class="grid-icon">
+        <i></i><i></i><i></i><i></i>
+      </span>
+    </div>
+  
+  </div>
+  
+  
+  <!-- Product Cards -->
+  <section class="arrival-products" data-aos="fade-up">
+<!--  -->
+<!-- Headset 1 -->
+<div class="product-card" data-category="Headset" data-aos="fade-up"
+     data-id="13"
+     data-name="HyperX Cloud II"
+     data-desc="HyperX Cloud II – Comfortable Gaming Headset with 7.1 Surround Sound"
+     data-price="85"
+     data-img="images/headset/hyperx-cloud2.png"
+     data-brand="HyperX"
+     data-category= "Headset"
+     data-sku="HX-CLD2-013"
+     data-warranty="1 Year"
+     data-stock="In Stock">
+  <div class="product-img-wrapper">
+    <img src="images/headset/headset1.png" alt="HyperX Cloud II">
+    <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">HyperX Cloud II</h3>
+    <p class="desc">Comfortable Gaming Headset with 7.1 Surround Sound</p>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(120)</span></div>
+    <div class="price">
+      <span class="current">$85</span> 
+    </div>
+  </div>
+  <div class="product-actions">
+    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-arrow-down"></i> Add to Cart</button>
+  </div>
+</div>
+
+<!-- Headset 2 -->
+<div class="product-card" data-category="Headset"data-aos="fade-up"
+     data-id="14"
+     data-name="Logitech G435"
+     data-desc="Logitech G435 Wireless Gaming Headset – Ultra-light, Comfortable Fit"
+     data-price="70"
+     data-img="images/headset/logitech-g435.png"
+     data-brand="Logitech"
+     data-category="Gaming Headset"
+     data-sku="LG-G435-014"
+     data-warranty="1 Year"
+     data-stock="In Stock">
+  <div class="product-img-wrapper">
+    <img src="images/headset/headset2.png" alt="Logitech G435">
+    <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Logitech G435</h3>
+    <p class="desc">Wireless Gaming Headset – Ultra-light, Comfortable Fit</p>
+    <div class="rating">⭐⭐⭐⭐ <span>(90)</span></div>
+    <div class="price">
+      <span class="current">$70</span> 
+    </div>
+  </div>
+  <div class="product-actions">
+    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-arrow-down"></i> Add to Cart</button>
+  </div>
+</div>
+
+<!-- Headset 3 -->
+<div class="product-card" data-category="Headset" data-aos="fade-up"
+     data-id="15"
+     data-name="SteelSeries Arctis 7"
+     data-desc="SteelSeries Arctis 7 Wireless – Gaming Headset with ClearCast Mic"
+     data-price="120"
+     data-img="images/headset/steelseries-arctis7.png"
+     data-brand="SteelSeries"
+     data-category="Gaming Headset"
+     data-sku="SS-A7-015"
+     data-warranty="2 Years"
+     data-stock="In Stock">
+  <div class="product-img-wrapper">
+    <img src="images/headset/headset1 (2).png" alt="SteelSeries Arctis 7">
+    <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">SteelSeries Arctis 7</h3>
+    <p class="desc">Wireless Gaming Headset with ClearCast Mic</p>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(110)</span></div>
+    <div class="price">
+      <span class="current">$120</span> 
+    </div>
+  </div>
+  <div class="product-actions">
+    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-arrow-down"></i> Add to Cart</button>
+  </div>
+</div>
+
+<!-- Laptop 1: HP -->
+<div class="product-card" data-aos="fade-up"
+     data-id="16"
+     data-name="HP Pavilion Laptop"
+     data-desc="HP Pavilion 15 – Intel i7, 16GB RAM, 512GB SSD, Full HD Display"
+     data-price="950"
+     data-img="images/laptop/hp-pavilion.png"
+     data-brand="HP"
+     data-category="Laptop"
+     data-sku="HP-PAV-016"
+     data-warranty="2 Years"
+     data-stock="In Stock">
+  <div class="product-img-wrapper">
+    <img src="images/hp/hp (2).png" alt="HP Pavilion Laptop">
+    <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">HP Pavilion Laptop</h3>
+    <p class="desc">Intel i7, 16GB RAM, 512GB SSD, Full HD Display</p>
+    <div class="rating">⭐⭐⭐⭐ <span>(105)</span></div>
+    <div class="price">
+      <span class="current">$950</span> 
+    </div>
+  </div>
+  <div class="product-actions">
+    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-arrow-down"></i> Add to Cart</button>
+  </div>
+</div>
+
+<!-- Laptop 2: Dell -->
+<div class="product-card" data-aos="fade-up"
+     data-id="17"
+     data-name="Dell Inspiron Laptop"
+     data-desc="Dell Inspiron 15 – Intel i7, 16GB RAM, 512GB SSD, Full HD Display"
+     data-price="850"
+     data-img="images/laptop/dell-inspiron.png"
+     data-brand="Dell"
+     data-category="Laptop"
+     data-sku="DL-INSP-017"
+     data-warranty="2 Years"
+     data-stock="In Stock">
+  <div class="product-img-wrapper">
+    <img src="images/dell/dell3.png" alt="Dell Inspiron Laptop">
+    <div class="icon-group">
+      <i class="fa-solid fa-code-comare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Dell Inspiron Laptop</h3>
+    <p class="desc">Intel i7, 16GB RAM, 512GB SSD, Full HD Display</p>
+    <div class="rating">⭐⭐⭐⭐ <span>(85)</span></div>
+    <div class="price">
+      <span class="current">$850</span> 
+    </div>
+  </div>
+  <div class="product-actions">
+    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-arrow-down"></i> Add to Cart</button>
+  </div>
+</div>
+
+<!-- Laptop 3: Lenovo -->
+<div class="product-card" data-aos="fade-up"
+     data-id="18"
+     data-name="Lenovo ThinkPad"
+     data-desc="Lenovo ThinkPad X1 – Intel i7, 16GB RAM, 1TB SSD, Business Laptop"
+     data-price="1200"
+     data-img="images/laptop/lenovo-thinkpad.png"
+     data-brand="Lenovo"
+     data-category="Laptop"
+     data-sku="LN-TPX1-018"
+     data-warranty="3 Years"
+     data-stock="In Stock">
+  <div class="product-img-wrapper">
+    <img src="images/lenovo/lenovo (1).png" alt="Lenovo ThinkPad">
+    <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Lenovo ThinkPad</h3>
+    <p class="desc">Intel i7, 16GB RAM, 1TB SSD, Business Laptop</p>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(95)</span></div>
+    <div class="price">
+      <span class="current">$1200</span> 
+    </div>
+  </div>
+  <div class="product-actions">
+    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-arrow-down"></i> Add to Cart</button>
+  </div>
+</div>
+
+<!-- Mobile 1: Huawei -->
+<div class="product-card" data-aos="fade-up"
+     data-id="19"
+     data-name="Huawei P50"
+     data-desc="Huawei P50 – 8GB RAM, 256GB Storage, 50MP Camera, 6.5-inch Display"
+     data-price="700"
+     data-img="images/mobile/huawei-p50.png"
+     data-brand="Huawei"
+     data-category="Smartphone"
+     data-sku="HW-P50-019"
+     data-warranty="1 Year"
+     data-stock="In Stock">
+  <div class="product-img-wrapper">
+    <img src="images/huawei/Huawei6 (3).png" alt="Huawei P50">
+    <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Huawei P50</h3>
+    <p class="desc">8GB RAM, 256GB Storage, 50MP Camera, 6.5-inch Display</p>
+    <div class="rating">⭐⭐⭐⭐☆ <span>(90)</span></div>
+    <div class="price">
+      <span class="current">$700</span> 
+    </div>
+  </div>
+  <div class="product-actions">
+    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-arrow-down"></i> Add to Cart</button>
+  </div>
+</div>
+
+<!-- Mobile 2: Samsung -->
+<div class="product-card" data-aos="fade-up"
+     data-id="20"
+     data-name="Samsung Galaxy S23"
+     data-desc="Samsung Galaxy S23 – 8GB RAM, 256GB Storage, 108MP Camera, 6.8-inch Display"
+     data-price="900"
+     data-img="images/mobile/samsung-galaxy-s23.png"
+     data-brand="Samsung"
+     data-category="Smartphone"
+     data-sku="SS-GS23-020"
+     data-warranty="1 Year"
+     data-stock="In Stock">
+  <div class="product-img-wrapper">
+    <img src="images/samsung/samsung (1).png" alt="Samsung Galaxy S23">
+    <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Samsung Galaxy S23</h3>
+    <p class="desc">8GB RAM, 256GB Storage, 108MP Camera, 6.8-inch Display</p>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(150)</span></div>
+    <div class="price">
+      <span class="current">$900</span>
+    </div>
+  </div>
+  <div class="product-actions">
+    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-arrow-down"></i> Add to Cart</button>
+  </div>
+</div>
+
+<!-- Mobile 3: Apple -->
+<div class="product-card" data-aos="fade-up"
+     data-id="21"
+     data-name="iPhone 14 Pro"
+     data-desc="Apple iPhone 14 Pro – 6GB RAM, 256GB Storage, Triple Camera System, 6.1-inch Display"
+     data-price="1100"
+     data-img="images/mobile/iphone-14-pro.png"
+     data-brand="Apple"
+     data-category="Smartphone"
+     data-sku="AP-IP14P-021"
+     data-warranty="1 Year"
+     data-stock="In Stock">
+  <div class="product-img-wrapper">
+    <img src="images/apple/apple (2).png" alt="iPhone 14 Pro">
+    <div class="icon-group">
+      <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+      <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+    </div>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">iPhone 14 Pro</h3>
+    <p class="desc">6GB RAM, 256GB Storage, Triple Camera System, 6.1-inch Display</p>
+    <div class="rating">⭐⭐⭐⭐⭐ <span>(200)</span></div>
+    <div class="price">
+      <span class="current">$1100</span>
+    </div>
+  </div>
+  <div class="product-actions">
+    <button class="add-to-cart-btn"><i class="fa-solid fa-cart-arrow-down"></i> Add to Cart</button>
+  </div>
+</div>
+    <!--  -->
+   
+    <div class="product-card" data-id="22" data-category="Smartphone" data-aos="fade-up" 
+    data-name="Huawei nova 13i"
+     data-desc="The Huawei nova 13i is a sleek and stylish mid-range smartphone"
+     data-price="45"
+     data-img="images/huawei/huawei.png"
+     data-brand="Huawei"
+     data-category="Mobile"
+     data-sku="HN13I-001"
+     data-warranty="1 Year"
+     data-stock="In Stock">
+      <div class="product-img-wrapper">
+        <img src="images/huawei/huawei.png" alt="Gaming Mouse">
+        <!-- <span class="badge">Hot</s pan> -->
+        <div class="icon-group">
+          <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+        <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+      </div>
+      </div>
+
+      <div class="product-info">
+        <h3 class="product-name">Huawei nova 13i</h3>
+        <p class="desc">The Huawei nova 13i is a sleek and stylish mid-range smartphone</p>
+        <div class="rating">⭐⭐⭐⭐☆ <span>(120)</span></div>
+        <div class="price">
+          <span class="current">$45</span> 
+        </div>
+      </div>
+
+      <div class="product-actions">
+        <button class="add-to-cart-btn">
+          <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class="product-card" data-id="23" data-category="Headset"data-aos="fade-up"
+    data-name="Sony Headset"
+     data-desc="The Huawei nova 13i is a sleek and stylish mid-range smartphone"
+     data-price="45"
+     data-img="images/huawei/huawei.png"
+     data-brand="Huawei"
+     data-category="Mobile"
+     data-sku="HN13I-001"
+     data-warranty="1 Year"
+     data-stock="In Stock">
+      <div class="product-img-wrapper">
+        <img src="images/headset/headset3.png" alt="Gaming Mouse">
+        <!-- <span class="badge">Hot</span> -->
+        <div class="icon-group">
+          <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+        <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+      </div>
+      </div>
+
+      <div class="product-info">
+        <h3 class="product-name">Sony Headset</h3>
+        <p class="desc">Sony WH-CH720N Noise Canceling Wireless</p>
+        <div class="rating">⭐⭐⭐⭐☆ <span>(120)</span></div>
+        <div class="price">
+          <span class="current">$45</span>
+        </div>
+      </div>
+
+      <div class="product-actions">
+        <button class="add-to-cart-btn">
+          <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class="product-card" data-id="24" data-category="Smartphone" data-aos="fade-up" 
+    data-name="Huawei nova 13i"
+     data-desc="The Huawei nova 13i is a sleek and stylish mid-range smartphone"
+     data-price="45"
+     data-img="images/huawei/huawei.png"
+     data-brand="Huawei"
+     data-category="Mobile"
+     data-sku="HN13I-001"
+     data-warranty="1 Year"
+     data-stock="In Stock">
+      <div class="product-img-wrapper">
+        <img src="images/huawei/huawei3.png" alt="Gaming Mouse">
+        <!-- <span class="badge">Hot</span> -->
+        <div class="icon-group">
+          <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+        <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+      </div>
+      </div>
+
+      <div class="product-info">
+        <h3 class="product-name">Huawei Pura 80</h3>
+        <p class="desc">The Huawei Pura 80 is a premium smartphone designed with a sleek modern look and powerful performance.</p>
+        <div class="rating">⭐⭐⭐⭐☆ <span>(120)</span></div>
+        <div class="price">
+          <span class="current">$45</span> 
+        </div>
+      </div>
+
+      <div class="product-actions">
+        <button class="add-to-cart-btn">
+          <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    <div class="product-card" data-id="25"data-aos="fade-up">
+      <div class="product-img-wrapper">
+        <img src="images/dell/dell1.png" alt="Gaming Mouse">
+        <!-- <span class="badge">Hot</span> -->
+        <div class="icon-group">
+          <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+        <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+      </div>
+      </div>
+
+      <div class="product-info">
+        <h3 class="product-name">Dell XPS 13 9345</h3>
+        <p class="desc">The Dell XPS 13 9345 is a premium ultrabook offering exceptional performance </p>
+        <div class="rating">⭐⭐⭐⭐☆ <span>(120)</span></div>
+        <div class="price">
+          <span class="current">$45</span> <del>$6s0</del>
+        </div>
+      </div>
+
+      <div class="product-actions">
+        <button class="add-to-cart-btn">
+          <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+        </button>
+      </div>
+    </div>
+    
+    
+  
+  </section>
+
+
+  <section class="latest-news" data-aos="fade-up">
+
+    <!-- HEADER -->
+    <div class="news-header"  data-aos="fade-up">
+      <h1>From Latest News</h1>
+      <div class="news-arrows">
+        <button class="prev">←</button>
+        <button class="next">→</button>
+      </div>
+    </div>
+  
+    <!-- SLIDER -->
+    <div class="news-slider" data-aos="fade-up">
+  
+      <!-- CARD 1 -->
+      <div class="news-card" data-aos="fade-up">
+        <img src="images/gamming laptop.png" alt="">
+        <div class="news-text">
+          <span class="category">Basic Knowledge</span>
+          <h3>Understanding Gaming Laptops</h3>
+          <p>Learn the essential features and specifications before buying your first gaming laptop.</p>
+          <p class="date">Feb 10, 2026</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+  
+      <!-- CARD 2 -->
+      <div class="news-card" data-aos="fade-up">
+        <img src="images/keyboard/Redragon_Kumara_K552-RGB_LED_Backlit_USB_Mechanical_Gaming_Keyboard_Without_Numlock_Keys__Bla___-removebg-preview.png" alt="">
+        <div class="news-text">
+          <span class="category">Tips & Tricks</span>
+          <h3>Top 5 Gaming Accessories</h3>
+          <p>Enhance your gaming experience with the most essential accessories available today.</p>
+          <p class="date">Feb 9, 2026</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+  
+      <!-- CARD 3 -->
+      <div class="news-card" data-aos="fade-up">
+        <img src="images/headset/gamming headset.png" alt="">
+        <div class="news-text">
+          <span class="category">News</span>
+          <h3>Upcoming Game Releases</h3>
+          <p>Stay updated with the latest game launches and announcements coming this month.</p>
+          <p class="date">Feb 8, 2026</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+  
+      <!-- CARD 4 -->
+      <div class="news-card" data-aos="fade-up">
+        <img src="images/headset/gamming headset.png" alt="">
+        <div class="news-text">
+          <span class="category">Reviews</span>
+          <h3>Best Gaming Headsets 2026</h3>
+          <p>Check out the top-rated gaming headsets for immersive sound and comfort.</p>
+          <p class="date">Feb 7, 2026</p>
+          <a href="#" class="read-more">Read More →</a>
+        </div>
+      </div>
+  
+    </div>
+  
+  </section>
+
+
+  
+
+  <footer class="site-footer" >
+
+    <div class="footer-container">
+  
+      <!-- ABOUT -->
+      <div class="footer-col about">
+        <img src="images/logo.png" alt="">
+        <p>Your ultimate destination for gaming gear and tech. Quality products, fast delivery, and trusted by gamers worldwide.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+  
+        <div class="newsletter">
+          <button onclick="window.location.href='mailto:support@gearnix.com?subject=Newsletter Subscription&body=I want to subscribe to GearNix newsletter';">
+            Subscribe via Email
+          </button>
+        </div>
+      </div>
+  
+      <!-- QUICK LINKS -->
+      <div class="footer-col links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="brands.html">Brand</a></li>
+          <li><a href="compare.html">Comapre</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="co">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- CUSTOMER SERVICE -->
+      <div class="footer-col support">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Order Tracking</a></li>
+        </ul>
+      </div>
+  
+      <!-- CONTACT -->
+      <div class="footer-col contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@gearnix.com</p>
+        <p>Phone: +92 300 1234567</p>
+        <p>Address: Karachi, Pakistan</p>
+      </div>
+  
+    </div>
+  
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 GearNix. All rights reserved.</p>
+    </div>
+  
+  </footer>
+    
+  <!-- COMPARE NOW BUTTON -->
+<button id="compare-now-btn" style="
+position:fixed;
+bottom:20px;
+right:20px;
+padding:15px 25px;
+font-size:16px;
+border:none;
+border-radius:10px;
+background:#22d3ff;
+color:#111;
+cursor:pointer;
+display:none;
+animation: blink 1s infinite;
+z-index:1000;
+">Compare Now</button>
+
+<div id="notification" style="
+position: fixed;
+top: 20px;
+right: 500px;
+background: #22d3ff;
+color: #11162a;
+padding: 12px 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px #000;
+display: none;
+font-weight: bold;
+z-index: 9999;
+transition: opacity 0.5s ease;
+">
+Added to cart!
+</div>
+
+<script src="app.js"></script>
+<!-- <script src="products.js"></script> -->
+<!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({  
+  duration: 1000,   // animation speed
+  once: true        // ek hi baar animate hoga
+});
+</script>
+<!-- <script>
+  
+  const filterLinks = document.querySelectorAll(".arrival-nav a");
+const product = document.querySelectorAll(".product-card");
+const heading = document.getElementById("category-heading");
+
+filterLinks.forEach(link => {
+
+  link.addEventListener("click", function(e) {
+
+    e.preventDefault();
+
+    const category = this.dataset.category;
+    const title = this.dataset.title;
+
+    // heading change
+    heading.textContent = title;
+
+    // active class
+    filterLinks.forEach(l => l.classList.remove("active"));
+    this.classList.add("active");
+
+    // filter products
+    product.forEach(product => {
+
+      const productCategory = product.dataset.category;
+
+      if (category === "all" || productCategory === category) {
+        product.style.display = "flex";
+      } else {
+        product.style.display = "none";
+      }
+
+    });
+
+  });
+
+});
+  // JS: notification function
+function showNotification(message) {
+    const notif = document.getElementById("notification");
+    notif.innerText = message;
+    notif.style.display = "block";
+    notif.style.opacity = "1";
+
+    // Auto-hide after 3 seconds
+    setTimeout(() => {
+        notif.style.opacity = "0";
+        setTimeout(() => notif.style.display = "none", 500);
+    }, 3000);
+}
+
+  document.querySelectorAll('.product-card').forEach(card => {
+  card.addEventListener('click', () => {
+    // Store all card data in sessionStorage
+    const productData = {
+      id: card.dataset.id,
+      name: card.dataset.name,
+      desc: card.dataset.desc,
+      price: parseFloat(card.dataset.price),
+      img: card.dataset.img,
+      brand: card.dataset.brand,
+      category: card.dataset.category,
+      sku: card.dataset.sku,
+      warranty: card.dataset.warranty,
+      stock: card.dataset.stock
+    };
+    sessionStorage.setItem('currentProduct', JSON.stringify(productData));
+
+    // Redirect to product detail page
+    // window.location.href = "product-details1.html";
+  });
+});
+
+
+// Sample products
+const products = [
+  { id: 1, name: "Apple iPhone 14", link: "product.html?id=1" },
+  { id: 2, name: "Samsung Galaxy S23", link: "product.html?id=2" },
+  { id: 3, name: "MacBook Pro 16", link: "product.html?id=3" },
+  { id: 4, name: "AirPods Pro", link: "product.html?id=4" },
+  { id: 5, name: "Sony WH-1000XM5", link: "product.html?id=5" },
+];
+
+
+
+const searchInput = document.getElementById("searchInput");
+const searchDropdown = document.getElementById("searchDropdown");
+
+// Show dropdown while typing
+searchInput.addEventListener("input", () => {
+    const query = searchInput.value.toLowerCase();
+    searchDropdown.innerHTML = "";
+
+    if(query.trim() === "") {
+        searchDropdown.style.display = "none";
+        return;
+    }
+
+    const results = products.filter(p => p.name.toLowerCase().includes(query));
+
+    if(results.length === 0){
+        searchDropdown.innerHTML = "<div>No results found</div>";
+    } else {
+        results.forEach(p => {
+            const div = document.createElement("div");
+            div.textContent = p.name;
+            div.addEventListener("click", () => {
+                window.location.href = p.link;
+            });
+            searchDropdown.appendChild(div);
+        });
+    }
+    searchDropdown.style.display = "block";
+});
+
+// Enter key functionality
+searchInput.addEventListener("keydown", (e) => {
+    if(e.key === "Enter"){
+        e.preventDefault();
+        const query = searchInput.value.toLowerCase();
+        const result = products.find(p => p.name.toLowerCase() === query);
+        if(result){
+            window.location.href = result.link;
+        } else {
+            alert("Product not found!");
+        }
+        searchDropdown.style.display = "none";
+    }
+});
+
+// Click outside to close dropdown
+document.addEventListener("click", (e) => {
+    if(!searchDropdown.contains(e.target) && e.target !== searchInput){
+        searchDropdown.style.display = "none";
+    }
+});
+// Navbar link active toggle
+const navLinks = document.querySelectorAll(".nav-links a");
+const currentPath = window.location.pathname.split("/").pop(); // current page file
+
+navLinks.forEach(link => {
+    const linkPath = link.getAttribute("href");
+    if(linkPath === currentPath){
+        link.classList.add("active");
+    } else {
+        link.classList.remove("active");
+    }
+});
+// const toggle = document.querySelector(".mobile-toggle");
+// const navIcons = document.querySelector(".nav-icons");
+
+// toggle.addEventListener("click", () => {
+//   navIcons.classList.toggle("active");
+// });
+
+
+// const toggle = document.querySelector(".mobile-toggle");
+// const mobileMenu = document.querySelector(".mobile-menu");
+
+// toggle.addEventListener("click",()=>{
+//   mobileMenu.classList.toggle("active");
+// });
+// Elements
+const mobileToggle = document.querySelector(".mobile-toggle");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMobile = document.getElementById("closeMobile");
+
+// Open mobile menu
+mobileToggle.addEventListener("click", () => {
+  mobileMenu.classList.add("active");
+});
+
+// Close mobile menu
+closeMobile.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+});
+
+// Optional: click outside menu to close
+window.addEventListener("click", (e) => {
+  if (mobileMenu.classList.contains("active") && !mobileMenu.contains(e.target) && e.target !== mobileToggle) {
+    mobileMenu.classList.remove("active");
+  }
+});
+// Auto-close mobile menu on screen resize
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 900 && mobileMenu.classList.contains("active")) {
+        mobileMenu.classList.remove("active");
+    }
+});
+// REVIEW ANIMATION
+const reviewSection = document.querySelector(".review-section");
+const fills = document.querySelectorAll(".fill");
+const ratingNumber = document.querySelector(".big-review h1");
+
+let started = false;
+
+window.addEventListener("scroll", () => {
+
+  const sectionTop = reviewSection.getBoundingClientRect().top;
+  const screenHeight = window.innerHeight;
+
+  if(sectionTop < screenHeight - 100 && !started){
+    started = true;
+
+    // ⭐ Number Counter
+    let count = 0;
+    const target = 4.9;
+    const step = 0.1;
+
+    const counter = setInterval(() => {
+      count += step;
+      ratingNumber.textContent = count.toFixed(1);
+
+      if(count >= target){
+        ratingNumber.textContent = target;
+        clearInterval(counter);
+      }
+
+    },40);
+
+    // ⭐ Progress Bars
+    fills.forEach(fill => {
+      const width = fill.dataset.width;
+      fill.style.width = width;
+    });
+
+  }
+
+});
+
+
+  // ==========================
+// 1️⃣ Search Toggle
+// ==========================
+document.querySelector(".search-icon").addEventListener("click", () => {
+    const wrapper = document.querySelector(".search-wrapper");
+    wrapper.classList.toggle("active");
+    wrapper.querySelector("input").focus();
+});
+
+// ==========================
+// 2️⃣ Mobile Menu Toggle
+// ==========================
+document.querySelector(".mobile-toggle").addEventListener("click", () => {
+    document.querySelector(".nav-links").classList.toggle("active");
+});
+
+
+// ==========================
+// 3️⃣ Wishlist / Heart
+// ==========================
+document.querySelectorAll(".heart-icon").forEach(icon => {
+
+icon.addEventListener("click", () => {
+
+  if (!checkLogin()) return;
+
+  const card = icon.closest(".product-card");
+  const productName = card.querySelector(".product-name").innerText;
+  const id = card.dataset.id;
+
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+  if (icon.classList.contains("active")) {
+
+    icon.classList.remove("active","fa-solid");
+    icon.classList.add("fa-regular");
+
+    wishlist = wishlist.filter(p => p.id != id);
+
+    showNotification(productName + " removed from wishlist");
+
+  } else {
+
+    icon.classList.add("active","fa-solid");
+    icon.classList.remove("fa-regular");
+
+    wishlist.push({
+      id: id,
+      name: productName
+    });
+
+    showNotification(productName + " added to wishlist");
+
+  }
+
+  localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+  document.querySelector(".heart-count").innerText = wishlist.length;
+
+});
+
+});
+
+
+// ==========================
+// 4️⃣ Cart Button & Count
+// ==========================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const cartCountEl = document.querySelector(".cart-count");
+    console.log(cartCountEl); // check kare ke ab element mil raha hai
+
+    const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+
+    addToCartBtns.forEach(addToCartBtn => {
+
+        addToCartBtn.addEventListener("click", (e) => {
+
+            e.stopPropagation();
+
+            const btn = e.currentTarget;
+            const card = btn.closest(".product-card");
+
+            const productName = card.querySelector(".product-name").innerText;
+            const price = parseFloat(card.querySelector(".current").innerText.replace(/[^0-9.]/g, "")) || 0;
+            const img = card.querySelector("img").src;
+            const id = card.dataset.id;
+
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            let product = {
+                id: id,
+                name: productName,
+                price: price,
+                quantity: 1,
+                img: img
+            };
+
+            let exist = cart.find(p => p.id === product.id);
+            if(exist){
+                exist.quantity = Number(exist.quantity || 0) + 1;
+            } else {
+                cart.push(product);
+            }
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            // Navbar count update
+            const cartCount = cart.reduce((acc, item) => acc + Number(item.quantity || 0), 0);
+            if(cartCountEl){
+                cartCountEl.innerText = cartCount;
+            }
+
+            // Button animation
+            btn.innerHTML = "✔ Added!";
+            btn.style.background = "#28a745";
+
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fa-solid fa-cart-arrow-down"></i> Add to Cart';
+                btn.style.background = "linear-gradient(45deg,#22d3ff,#1ab7e3)";
+            }, 2500);
+
+            showNotification(productName + " added to cart");
+        });
+    });
+    
+
+    // Page reload par bhi cart count show ho
+    function updateCartCount(){
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartCount = cart.reduce((acc, item) => acc + Number(item.quantity || 0), 0);
+
+        if(cartCountEl){
+            cartCountEl.innerText = cartCount;
+        }
+    }
+
+    updateCartCount();
+
+});
+
+
+// ==========================
+// 5️⃣ Hero Slider
+// ==========================
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".slide");
+    let current = 0;
+    if (slides.length) setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+    }, 3500);
+});
+
+// ==========================
+// 6️⃣ Brand Card Fade-in
+// ==========================
+const brandCards = document.querySelectorAll(".brand-card");
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add("fade-in");
+    });
+}, { threshold: 0.2 });
+brandCards.forEach(card => observer.observe(card));
+
+// ==========================
+// 7️⃣ Countdown Timer
+// ==========================
+document.querySelectorAll(".countdown").forEach(timer => {
+    const endTime = new Date(timer.dataset.end).getTime();
+    function update() {
+        const now = Date.now();
+        let dist = endTime - now;
+        if (dist < 0) { timer.innerHTML = "Deal Ended"; return; }
+        const d = Math.floor(dist / (1000 * 60 * 60 * 24));
+        const h = Math.floor((dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((dist % (1000 * 60)) / 1000);
+        timer.innerHTML = `<span>${d}d</span> <span>${h}h</span> <span>${m}m</span> <span>${s}s</span>`;
+    }
+    update();
+    setInterval(update, 1000);
+});
+
+
+
+// ==========================
+// 9️⃣ News Slider
+// ==========================
+const slider = document.querySelector(".news-slider");
+const nextBtn = document.querySelector(".news-arrows .next");
+const prevBtn = document.querySelector(".news-arrows .prev");
+if (slider && nextBtn && prevBtn) {
+    nextBtn.addEventListener("click", () => {
+        const card = slider.querySelector(".news-card");
+        slider.scrollBy({ left: card.offsetWidth + parseInt(getComputedStyle(slider).gap), behavior: "smooth" });
+    });
+    prevBtn.addEventListener("click", () => {
+        const card = slider.querySelector(".news-card");
+        slider.scrollBy({ left: -(card.offsetWidth + parseInt(getComputedStyle(slider).gap)), behavior: "smooth" });
+    });
+}
+
+const bigImage = document.getElementById("big-image");
+const thumbs = document.querySelectorAll(".thumb");
+
+thumbs.forEach(thumb => {
+  thumb.addEventListener("click", () => {
+
+    bigImage.style.opacity = "0";
+
+    setTimeout(() => {
+      bigImage.src = thumb.src;
+      bigImage.style.opacity = "1";
+    }, 200);
+
+  });
+});
+// ==========================
+// 🔟 Login / Logout
+// ==========================
+// const loginIcon = document.getElementById("login-name");
+// const loginBtn = document.getElementById("loginBtn");
+// const logoutBtn = document.getElementById("logoutBtn");
+
+// Desktop login elements (agar already nahi hain)
+const loginIcon = document.getElementById("login-name"); // desktop header
+const loginBtn = document.getElementById("loginBtn");
+const logoutBtn = document.getElementById("logoutBtn");
+
+// Mobile login elements
+const mobileLoginIcon = document.querySelector(".mobile-login-name");
+const mobileLoginBtn = document.querySelector(".mobile-login");
+const mobileLogoutBtn = document.querySelector(".mobile-logout");
+
+
+function updateLogin() {
+    const username = localStorage.getItem("username");
+
+    if (username) {
+        // Desktop
+        loginIcon.innerText = username;
+        loginBtn.style.cursor = "default";
+        loginBtn.onclick = () => alert("Already logged in ✅");
+        if (logoutBtn) logoutBtn.style.display = "inline";
+
+        // Mobile
+        mobileLoginIcon.innerText = username;
+        mobileLoginBtn.style.cursor = "default";
+        mobileLoginBtn.onclick = () => alert("Already logged in ✅");
+        if (mobileLogoutBtn) mobileLogoutBtn.style.display = "flex"; // flex for mobile logout div
+    } else {
+        // Desktop
+        loginIcon.innerText = "Login";
+        loginBtn.style.cursor = "pointer";
+        loginBtn.onclick = () => {
+            sessionStorage.setItem("redirectAfterLogin", window.location.href);
+            window.location.href = "login.html";
+        };
+        if (logoutBtn) logoutBtn.style.display = "none";
+
+        // Mobile
+        mobileLoginIcon.innerText = "Login";
+        mobileLoginBtn.style.cursor = "pointer";
+        mobileLoginBtn.onclick = () => {
+            sessionStorage.setItem("redirectAfterLogin", window.location.href);
+            window.location.href = "login.html";
+        };
+        if (mobileLogoutBtn) mobileLogoutBtn.style.display = "none";
+    }
+}
+
+
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => logoutUser());
+}
+if (mobileLogoutBtn) {
+    mobileLogoutBtn.addEventListener("click", () => logoutUser());
+}
+
+function logoutUser() {
+    localStorage.removeItem("username");
+    localStorage.removeItem("cart");
+    localStorage.removeItem("wishlist");
+    localStorage.removeItem("compare");
+    alert("Logged out successfully!");
+    updateLogin();
+    location.reload();
+}
+
+updateLogin();
+function checkLogin() {
+    if (!localStorage.getItem("username")) {
+        sessionStorage.setItem("redirectAfterLogin", window.location.href);
+        window.location.href = "login.html";
+        return false;
+    }
+    return true;
+}
+
+// ==========================
+// 1️⃣1️⃣ Compare System (2 products only)
+// ==========================
+localStorage.removeItem("compare");
+const productCards = document.querySelectorAll(".product-card");
+const compareBtn = document.getElementById("compare-now-btn");
+
+function loadCompare() { return JSON.parse(localStorage.getItem("compare") || "[]"); }
+function saveCompare(list) { localStorage.setItem("compare", JSON.stringify(list)); }
+function updateCompareBtn(list) { compareBtn.style.display = list.length === 2 ? "block" : "none"; }
+
+let compareList = loadCompare();
+updateCompareBtn(compareList);
+
+productCards.forEach(card => {
+    const compareIcon = card.querySelector(".compare-icon");
+    if (compareList.find(p => p.id == card.dataset.id)) compareIcon.classList.add("active");
+
+    compareIcon.addEventListener("click", () => {
+        const id = card.dataset.id;
+        let exist = compareList.find(p => p.id == id);
+        if (exist) {
+            compareList = compareList.filter(p => p.id != id);
+            compareIcon.classList.remove("active");
+        } else {
+            if (compareList.length >= 2) { alert("You can only compare 2 products!"); return; }
+            compareList.push({
+                id,
+                name: card.querySelector(".product-name").textContent,
+                price: parseFloat(card.dataset.price || 0),
+                rating: card.dataset.rating,
+                img: card.querySelector("img").src,
+                desc: card.querySelector(".desc").textContent,
+                model: card.dataset.model || "",
+                ram: card.dataset.ram || "",
+                rom: card.dataset.rom || "",
+                category: card.dataset.category || ""
+            });
+            compareIcon.classList.add("active");
+        }
+        saveCompare(compareList);
+        updateCompareBtn(compareList);
+    });
+});
+
+
+
+compareBtn.addEventListener("click", () => {
+    if (compareList.length === 2) window.location.href = "compare.html";
+});
+
+// Store all products for compare page
+localStorage.setItem("compareProducts", JSON.stringify(Array.from(productCards).map(card => ({
+    id: card.dataset.id,
+    name: card.querySelector(".product-name").textContent,
+    price: parseFloat(card.dataset.price || 0),
+    rating: card.dataset.rating,
+    img: card.querySelector("img").src,
+    desc: card.querySelector(".desc").textContent,
+    model: card.dataset.model || "",
+    ram: card.dataset.ram || "",
+    rom: card.dataset.rom || "",
+    category: card.dataset.category || ""
+}))));
+
+
+
+document.querySelectorAll(".product-card").forEach(card => {
+  card.addEventListener("click", (e)=>{
+    // Agar click Add to Cart ya icon pe hua, to ignore karo
+    if(e.target.closest(".add-to-cart-btn") || e.target.closest(".heart-icon") || e.target.closest(".compare-icon")){
+      return; // card click ko ignore karo
+    }
+    const id = card.dataset.id;
+    window.location.href = `product-details1.html?id=${id}`;
+  });
+});
+
+
+window.addEventListener("load", () => {
+    const username = localStorage.getItem("username");
+    if(!username){
+        sessionStorage.setItem("redirectAfterLogin", window.location.href);
+        // window.location.href = "login.html";
+    }
+});
+
+
+// happy customer
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach(counter => {
+
+  const target = parseFloat(counter.dataset.target);
+  let count = 0;
+
+  const speed = target > 10 ? target / 100 : target / 40; // small numbers faster
+
+  const update = () => {
+
+    count += speed;
+
+    if(count < target){
+
+      // agar decimal hai
+      if(target % 1 !== 0){
+        counter.innerText = count.toFixed(1);
+      } else {
+        counter.innerText = Math.floor(count);
+      }
+
+      requestAnimationFrame(update);
+
+    } else {
+
+      counter.innerText = target;
+
+    }
+
+  };
+
+  update();
+
+});
+
+
+
+</script> -->
+
+
+
+
+</body>
+</html>

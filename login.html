@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GEARNIX - Login / Sign Up</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<style>
+/* ===== GLOBAL ===== */
+* {margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif;}
+body {background:#0f1424; color:#fff; display:flex; align-items:center; justify-content:center; min-height:100vh;}
+
+/* ===== MODAL ===== */
+.modal-bg {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(15,20,36,0.8);
+  backdrop-filter: blur(8px);
+  display:flex; justify-content:center; align-items:center;
+  z-index: 1000;
+}
+
+.modal {
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  padding: 40px;
+  width: 360px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.modal h2 {
+  text-align:center; margin-bottom:30px; font-size:26px; letter-spacing:1px;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 40px 12px 15px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+  font-size: 16px;
+}
+
+.form-group input:focus {
+  background: rgba(255,255,255,0.2);
+}
+
+.form-group i {
+  position: absolute;
+  top:50%;
+  right:15px;
+  transform: translateY(-50%);
+  color:#fff;
+  cursor:pointer;
+}
+
+button {
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:#1f70ff;
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background:#0056d6;
+}
+
+.toggle-link {
+  text-align:center;
+  margin-top:15px;
+  cursor:pointer;
+  color:#ffffff;
+  transition:0.3s;
+  cursor:auto;
+}
+.toggle-link span {
+  text-align:center;
+  margin-top:15px;
+  cursor:pointer;
+  color:#1f70ff;
+  transition:0.3s;
+}
+.toggle-link span:hover {
+  text-decoration: underline;
+}
+
+
+.toggle-link:hover {
+  /* text-decoration: underline; */
+}
+
+.error-msg {
+  color:#ff4d4d;
+  font-size:14px;
+  margin-bottom:10px;
+  text-align:center;
+}
+
+.success-msg {
+  color:#4cd137;
+  font-size:14px;
+  margin-bottom:10px;
+  text-align:center;
+}
+
+.checkbox-group {
+  display:flex;
+  align-items:center;
+  font-size:14px;
+  margin-bottom:15px;
+}
+
+.checkbox-group input {
+  margin-right:8px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:400px){
+  .modal {width:90%; padding:30px;}
+}
+</style>
+</head>
+<body>
+  
+
+<!-- MODAL BACKGROUND -->
+<div class="modal-bg">
+  <div class="modal">
+
+    <h2 id="form-title">Login</h2>
+
+    <div class="error-msg" id="error-msg"></div>
+    <div class="success-msg" id="success-msg"></div>
+
+    <!-- LOGIN FORM -->
+    <form id="login-form">
+      <div class="form-group">
+        <input type="text" id="login-username" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="login-password" placeholder="Password" required>
+        <i class="fa-solid fa-eye" id="login-toggle"></i>
+      </div>
+      <div class="checkbox-group">
+        <input type="checkbox" id="remember-me">
+        <label for="remember-me">Remember Me</label>
+      </div>
+      <button type="submit">Login</button>
+      <p class="toggle-link" id="show-signu"> Don't have an account?<span id="show-signup"> Sign Up</span></p>
+    </form>
+
+    <!-- SIGNUP FORM -->
+    <form id="signup-form" style="display:none;">
+      <div class="form-group">
+        <input type="text" id="signup-username" placeholder="Username" required>
+      </div>
+      <div class="form-group">
+        <input type="password" id="signup-password" placeholder="Password" required>
+        <i class="fa-solid fa-eye" id="signup-toggle"></i>
+      </div>
+      <div class="form-group">
+        <input type="password" id="signup-confirm" placeholder="Confirm Password" required>
+        <i class="fa-solid fa-eye" id="signup-confirm-toggle"></i>
+      </div>
+      <button type="submit">Sign Up</button>
+      <p class="toggle-link" id="show-logi">
+        Already have an account? <span  id="show-login"> Login</span>
+      </p>
+    </form>
+
+  </div>
+</div>
+
+<script>
+// ===== TOGGLE PASSWORD VISIBILITY =====
+function setupToggle(inputId, iconId){
+  const input = document.getElementById(inputId);
+  const icon = document.getElementById(iconId);
+  icon.addEventListener("click", ()=>{
+    if(input.type==="password"){input.type="text"; icon.style.color="#1f70ff";}
+    else{input.type="password"; icon.style.color="#fff";}
+  });
+}
+
+setupToggle("login-password","login-toggle");
+setupToggle("signup-password","signup-toggle");
+setupToggle("signup-confirm","signup-confirm-toggle");
+
+// ===== TOGGLE FORMS =====
+const loginForm = document.getElementById("login-form");
+const signupForm = document.getElementById("signup-form");
+const showSignup = document.getElementById("show-signup");
+const showLogin = document.getElementById("show-login");
+const formTitle = document.getElementById("form-title");
+const errorMsg = document.getElementById("error-msg");
+const successMsg = document.getElementById("success-msg");
+
+showSignup.addEventListener("click", ()=>{
+  loginForm.style.display="none";
+  signupForm.style.display="block";
+  formTitle.innerText="Sign Up";
+  errorMsg.innerText=""; successMsg.innerText="";
+});
+
+showLogin.addEventListener("click", ()=>{
+  signupForm.style.display="none";
+  loginForm.style.display="block";
+  formTitle.innerText="Login";
+  errorMsg.innerText=""; successMsg.innerText="";
+});
+
+// ===== LOCAL STORAGE BASED ACCOUNTS =====
+function hashPassword(pwd){
+  // simple simulated hash
+  let hash = 0;
+  for(let i=0;i<pwd.length;i++){
+    hash = (hash << 5) - hash + pwd.charCodeAt(i);
+    hash = hash & hash;
+  }
+  return hash;
+}
+
+function getUsers(){
+  return JSON.parse(localStorage.getItem("users")) || [];
+}
+
+function saveUsers(users){
+  localStorage.setItem("users", JSON.stringify(users));
+}
+
+// ===== SIGNUP =====
+signupForm.addEventListener("submit", function(e){
+  e.preventDefault();
+  errorMsg.innerText=""; successMsg.innerText="";
+
+  const username = document.getElementById("signup-username").value.trim();
+  const password = document.getElementById("signup-password").value.trim();
+  const confirm = document.getElementById("signup-confirm").value.trim();
+
+  if(password!==confirm){ errorMsg.innerText="Passwords do not match!"; return; }
+
+  let users = getUsers();
+  if(users.find(u=>u.username===username)){ errorMsg.innerText="Username already exists!"; return; }
+
+  users.push({username, password:hashPassword(password)});
+  saveUsers(users);
+
+  successMsg.innerText="Account created successfully! ✅ You can login now.";
+  signupForm.reset();
+});
+
+// ===== LOGIN =====
+loginForm.addEventListener("submit", function(e){
+  e.preventDefault();
+  errorMsg.innerText=""; successMsg.innerText="";
+
+  const username = document.getElementById("login-username").value.trim();
+  const password = document.getElementById("login-password").value.trim();
+  const remember = document.getElementById("remember-me").checked;
+
+  const users = getUsers();
+  const user = users.find(u=>u.username===username && u.password===hashPassword(password));
+
+  if(!user){ errorMsg.innerText="Invalid username or password!"; return; }
+
+  localStorage.setItem("username", username);
+  if(remember){ localStorage.setItem("rememberedUser", username); }
+
+  successMsg.innerText="Logged in successfully! ✅ Redirecting...";
+  const redirect = sessionStorage.getItem("redirectAfterLogin");
+if(redirect){
+    sessionStorage.removeItem("redirectAfterLogin");
+    window.location.href = redirect; // wapas wo page open
+} else {
+    window.location.href = "index.html"; // default page
+}
+  // setTimeout(()=>{ window.location.href="index.html"; }, 1500);
+});
+
+// login.js
+const username = localStorage.getItem("username");
+if(username){
+    // user already logged in → redirect to last page
+    const redirect = sessionStorage.getItem("redirectAfterLogin") || "index.html";
+    sessionStorage.removeItem("redirectAfterLogin");
+    window.location.href = redirect;
+}
+
+
+
+
+</script>
+</body>
+</html>

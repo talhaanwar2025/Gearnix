@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Page</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <link rel="stylesheet" href="main.css">
+</head>
+<!-- <style>/* GRID */
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+#brand-products{
+  display:flex;
+  flex-wrap: wrap;
+  gap:30px;
+  justify-items:center;
+  justify-content: center;
+  padding: 20px;
+}
+#brand-title{
+  text-align: center;
+  margin: 50px;
+  color: #22d3ff;
+}
+
+  /* CARD GLASS */
+.product-card{
+  backdrop-filter:blur(15px);
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+  border-radius:16px;
+  overflow:hidden;
+  transition:0.4s;
+  max-width:280px;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 8px 30px rgba(0,0,0,0.5);
+}
+
+.product-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px #22d3ff;
+}
+
+/* IMAGE */
+.product-img-wrapper{
+  position:relative;
+  height:220px;          /* Card ki image height same */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#0f1424;    /* Empty space clean lage */
+}
+
+.product-img-wrapper img{
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;    /* Image crop nahi hogi */
+}
+.product-card:hover img{
+  transform:scale(1.08);
+}
+
+/* BADGE */
+.badge{
+  position:absolute;
+  top:10px;
+  left:10px;
+  background:#ff3fb4;
+  padding:5px 10px;
+  border-radius:8px;
+  font-size:12px;
+  font-weight:bold;
+}
+.product-card:nth-child(2) .badge{
+  background:#22c55e;   /* Green example */
+}
+
+/* HEART */
+/* .heart-icon{
+  position:absolute;
+  top:10px;
+  right:10px;
+  background:rgba(0,0,0,0.6);
+  padding:10px;
+  border-radius:50%;
+  cursor:pointer;
+  font-size:18px;
+  transition:0.3s;
+  color:#ff3fb4;
+}
+
+.heart-icon.active{
+  color:#fff;
+  background:#ff3fb4;
+  transform:scale(1.2);
+} */
+
+/* INFO */
+.product-info{
+  padding:18px;
+  flex:1;
+}
+
+.product-name{
+  font-size:1.2rem;
+  font-weight:bold;
+}
+
+.desc{
+  font-size:0.85rem;
+  color:#b8c1d9;
+  margin:8px 0;
+}
+
+.rating{
+  color:#ffd700;
+  margin-bottom:10px;
+}
+
+.price{
+  font-size:1.1rem;
+  font-weight:bold;
+}
+
+.price del{
+  color:#888;
+  font-size:0.9rem;
+}
+
+/* BUTTON */
+.product-actions{
+  padding:0 18px 18px;
+}
+
+.add-to-cart-btn{
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  font-weight:bold;
+  font-size:1rem;
+  background:linear-gradient(45deg,#22d3ff,#1ab7e3);
+  cursor:pointer;
+  transition:0.3s;
+  position:relative;
+  overflow:hidden;
+}
+
+.add-to-cart-btn:active{
+  transform:scale(0.95);
+}
+
+.add-to-cart-btn::after{
+  content:"";
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left:-100%;
+  background:rgba(255,255,255,0.3);
+  transition:0.5s;
+}
+
+.add-to-cart-btn:hover::after{
+  left:100%;
+}
+.add-to-cart-btn {
+  width:100%;
+  padding:14px;
+  border:none;
+  border-radius:10px;
+  font-weight:bold;
+  font-size:1rem;
+  background:#ff3fb4; /* initial pink */
+  color: #fff;
+  cursor:pointer;
+  transition:0.3s;
+  position:relative;
+  overflow:hidden;
+}
+
+.add-to-cart-btn.active {
+  background:#22c55e; /* green on click */
+}
+
+.add-to-cart-btn.done {
+  background:#22d3ff; /* light blue after added */
+  color: #111;
+}
+/* #brand-nav{
+  display: flex;
+  padding: 0 20px;
+  align-items: center;
+  align-content: center;
+}
+#brand-nav button {
+  padding:8px 14px;
+    border:none;
+    border-radius:8px;
+    background:#11162a;
+    color:#22d3ff;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+#brand-nav button.active {
+  background:#22d3ff;
+    color:#11162a;
+} */
+/* Brand Nav Responsive */
+#brand-nav {
+    display: flex;
+    flex-wrap: nowrap;      /* scrollable row */
+    overflow-x: auto;       /* horizontal scroll on small screens */
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+#brand-nav button {
+    flex: 0 0 auto;          /* buttons fixed width in scroll */
+    padding: 8px 16px;
+    border: none;
+    border-radius: 8px;
+    background: #11162a;
+    color: #22d3ff;
+    cursor: pointer;
+    transition: 0.3s;
+    white-space: nowrap;     /* prevent text wrap */
+}
+
+#brand-nav button.active {
+    background: #22d3ff;
+    color: #11162a;
+}
+
+/* Hide scrollbar for nicer look */
+#brand-nav::-webkit-scrollbar {
+    display: none;
+}
+#brand-nav {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+}
+
+/* Optional: make buttons wrap on really small screens */
+@media (max-width: 400px){
+    #brand-nav {
+        flex-wrap: wrap; /* wrap buttons to next line if too small */
+        <link rel="stylesheet" href="main.css">
+    }
+}
+</style> -->
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+<body>
+<!-- NAVBAR -->
+<header class="main-navbar" data-aos="fade-down">
+  <!-- LEFT: Logo -->
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+  </div>
+
+  <!-- CENTER: Nav Links -->
+  <nav class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="product.html">Products</a>
+    <a href="brands.html">Brands</a>
+    <a href="compare.html">Compare</a>
+    <!-- <a href="checkout.html">Check out</a> -->
+    <a href="about.html">About</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+
+  <!-- RIGHT: Icons -->
+  <div class="nav-icons">
+    <!-- SEARCH -->
+    <div class="search-wrapper">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" placeholder="Search products..." id="searchInput" class="search-input">
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+
+    <!-- HEART / Wishlist -->
+    <div class="icon-wrapper">
+      <i class="fa-regular fa-heart heart-icon"></i>
+      <span class="nav-badge heart-count">0</span>
+    </div>
+
+    <!-- CART -->
+    <div class="icon-wrapper">
+      <i class="fa-solid fa-cart-shopping cart-icon"></i>
+      <span class="nav-badge cart-count">0</span>
+    </div>
+
+   
+
+    <span class="login" id="loginBtn">
+      <i class="fa-solid fa-circle-user"></i>
+      <span id="login-name">My Account</span>
+    </span>
+    <span id="logoutBtn" style="cursor: pointer; "> <i class="fas fa-sign-out"></i></span>
+
+    <!-- MOBILE TOGGLE -->
+  </div>
+  <i class="fa-solid fa-bars mobile-toggle"></i>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <!-- Close button -->
+  <i class="fa-solid fa-xmark close-mobile" id="closeMobile"></i>
+
+  <!-- Top: Profile + Search -->
+  <div class="mobile-top">
+    <div class="mobile-profile">
+      <!-- <i class="fa-solid fa-circle-user"></i>
+      <span id="login-name">My Account</span> -->
+      <span class="mobile-login" id="mobileLoginBtn">
+        <i class="fa-solid fa-circle-user"></i>
+        <span class="mobile-login-name">My Account</span>
+      </span>
+      </span>
+    </div>
+    
+    <div class="mobile-search">
+      <input type="text" placeholder="Search products...">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+
+  <!-- Nav Links -->
+  <nav class="mobile-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="product.html">Products</a>
+    <a href="compare.html">Compare</a>
+    <a href="About">About</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+
+  <!-- Bottom: Logout -->
+  <div class="mobile-logout">
+    <i class="fas fa-sign-out"></i>
+    <span>Logout</span>
+  </div>
+</div>
+
+  <main>
+    
+    <h1 id="brand-title" data-aos="fade-down">Brand Name</h1>
+    <div id="brand-nav" data-aos="fade-left"  style="text-align:center; margin:20px 0;">
+      <!-- Buttons yahan JS se generate honge -->
+    </div>
+    <div id="brand-products" data-aos="fade-up" class="products-grid">
+      <!-- Filtered products yahan show honge -->
+     
+      
+      
+    </div>
+  </main>
+  
+  <footer class="site-footer">
+
+    <div class="footer-container">
+  
+      <!-- ABOUT -->
+      <div class="footer-col about">
+        <img src="images/logo.png" alt="">
+
+        <p>Your ultimate destination for gaming gear and tech. Quality products, fast delivery, and trusted by gamers worldwide.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+  
+        <div class="newsletter">
+          <button onclick="window.location.href='mailto:support@gearnix.com?subject=Newsletter Subscription&body=I want to subscribe to GearNix newsletter';">
+            Subscribe via Email
+          </button>
+        </div>
+      </div>
+  
+      <!-- QUICK LINKS -->
+      <div class="footer-col links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="brands.html">Brand</a></li>
+          <li><a href="compare.html">Comapre</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- CUSTOMER SERVICE -->
+      <div class="footer-col support">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Order Tracking</a></li>
+        </ul>
+      </div>
+  
+      <!-- CONTACT -->
+      <div class="footer-col contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@gearnix.com</p>
+        <p>Phone: +92 300 1234567</p>
+        <p>Address: Karachi, Pakistan</p>
+      </div>
+  
+    </div>
+  
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 GearNix. All rights reserved.</p>
+    </div>
+  
+  </footer>
+    
+  <!-- COMPARE NOW BUTTON -->
+<button id="compare-now-btn" style="
+position:fixed;
+bottom:20px;
+right:20px;
+padding:15px 25px;
+font-size:16px;
+border:none;
+border-radius:10px;
+background:#22d3ff;
+color:#111;
+cursor:pointer;
+display:none;
+animation: blink 1s infinite;
+z-index:1000;
+">Compare Now</button>
+
+<div id="notification" style="
+position: fixed;
+top: 20px;
+right: 500px;
+background: #22d3ff;
+color: #11162a;
+padding: 12px 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px #000;
+display: none;
+font-weight: bold;
+z-index: 9999;
+transition: opacity 0.5s ease;
+">
+Added to cart!
+</div>
+<!-- AOS JS -->
+<!-- <script src="app.js"></script> -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,   // animation speed
+  once: true        // ek hi baar animate hoga
+});
+</script>
+  <!-- <script src="brands.js"></script> -->
+  <script>
+
+    
+// toogle
+const mobileToggle = document.querySelector(".mobile-toggle");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMobile = document.getElementById("closeMobile");
+
+// Open mobile menu
+mobileToggle.addEventListener("click", () => {
+  mobileMenu.classList.add("active");
+});
+
+// Close mobile menu
+closeMobile.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+});
+
+// Optional: click outside menu to close
+window.addEventListener("click", (e) => {
+  if (mobileMenu.classList.contains("active") && !mobileMenu.contains(e.target) && e.target !== mobileToggle) {
+    mobileMenu.classList.remove("active");
+  }
+});
+// Auto-close mobile menu on screen resize
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 900 && mobileMenu.classList.contains("active")) {
+        mobileMenu.classList.remove("active");
+    }
+});
+
+// ==========================
+// 2️⃣ Mobile Menu Toggle
+// ==========================
+document.querySelector(".mobile-toggle").addEventListener("click", () => {
+    document.querySelector(".nav-links").classList.toggle("active");
+});
+    
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+let currentPath = window.location.pathname.split("/").pop();
+
+// agar URL me file name nahi hai to index.html samjho
+if(currentPath === ""){
+  currentPath = "index.html";
+}
+
+navLinks.forEach(link => {
+  const linkPath = link.getAttribute("href");
+
+  if(linkPath === currentPath){
+    link.classList.add("active");
+  }else{
+    link.classList.remove("active");
+  }
+});
+    // ==========================
+    // 1️⃣ Brand Page Setup
+    // ==========================
+    
+    
+    const products = [
+  // Samsung 4
+  { id: 45, name: "Samsung Galaxy S23", dec: "8GB RAM, 256GB Storage, 108MP Camera, 6.8-inch Display", brand: "Samsung", img: "images/samsung/samsung (1).png", price: 900 },
+  { id: 46, name: "Samsung 1TB SSD", dec: "NVMe Ultra Fast Storage", brand: "Samsung", img: "images/ssd/Samsung 1TB SSD (1).png", price: 180 },
+  { id: 47, name: "Samsung TV 55 inch", dec: "LED TV, Smart, 4K", brand: "Samsung", img: "images/monitor/monitor (1).png", price: 799 },
+  { id: 48, name: "Samsung Router", dec: "Dual Band, WiFi 6", brand: "Samsung", img: "images/routers/Samsung Router (1).png", price: 85 },
+
+  // Huawei 4
+  { id: 49, name: "Huawei P50", dec: "8GB RAM, 256GB Storage, 50MP Camera, 6.5-inch Display", brand: "Huawei", img: "images/huawei/Huawei6 (3).png", price: 700 },
+  { id: 50, name: "Huawei Laptop", dec: "Intel i7, 16GB RAM, 512GB SSD", brand: "Huawei", img: "images/huawei leptop/Huawei Laptop (1).png", price: 950 },
+  { id: 51, name: "Huawei Smartwatch", dec: "Fitness Tracker, Heart Rate Monitor", brand: "Huawei", img: "images/watch/Huawei Smartwatch (1).png", price: 200 },
+  { id: 52, name: "Huawei Power Bank", dec: "10000mAh, Fast Charging", brand: "Huawei", img: "images/power bank/Anker 20000mAh Power Bank (1).png", price: 50 },
+
+  // Apple 4
+  { id: 53, name: "iPhone 14 Pro", dec: "6GB RAM, 256GB Storage, Triple Camera, 6.1-inch Display", brand: "Apple", img: "images/apple/apple (2).png", price: 1100 },
+  { id: 54, name: "Apple Watch Series 9", dec: "GPS, Fitness Tracker, Heart Rate Monitor", brand: "Apple", img: "images/watch/Apple Watch Series 9 (1).png", price: 400 },
+  { id: 55, name: "Apple MacBook Air", dec: "M2 Chip, 16GB RAM, 512GB SSD", brand: "Apple", img: "images/macbook/macbook (1).png", price: 1200 },
+  { id: 56, name: "Apple AirPods Pro", dec: "Wireless, Noise Cancelling", brand: "Apple", img: "images/air pods/apple air pods (1).png", price: 250 },
+
+  // HP 4
+  { id: 57, name: "HP Pavilion Laptop", dec: "Intel i7, 16GB RAM, 512GB SSD", brand: "HP", img: "images/hp/hp (1).png", price: 950 },
+  { id: 58, name: "HP Desktop", dec: "Intel i5, 16GB RAM, 1TB HDD", brand: "HP", img: "images/hp/desktop (1).png", price: 850 },
+  { id: 59, name: "HP Monitor", dec: "24-inch, Full HD, IPS Panel", brand: "HP", img: "images/hp/hp monitor (1).png", price: 200 },
+  { id: 60, name: "HP Keyboard", dec: "Mechanical, Backlit", brand: "HP", img: "images/hp/hp keyboard (1).png", price: 120 },
+
+  // Dell 4
+  { id: 61, name: "Dell Inspiron Laptop", dec: "Intel i7, 16GB RAM, 512GB SSD", brand: "Dell", img: "images/dell/dell3.png", price: 850 },
+  { id: 62, name: "Dell XPS Laptop", dec: "Intel i9, 32GB RAM, 1TB SSD", brand: "Dell", img: "images/dell/dell1.png", price: 1500 },
+  { id: 63, name: "Dell Monitor", dec: "27-inch, 2K, IPS Panel", brand: "Dell", img: "images/monitor/monitor (2).png", price: 350 },
+  { id: 64, name: "Dell Wireless Mouse", dec: "Ergonomic, High Precision", brand: "Dell", img: "images/gaming/mouse.png", price: 60 }
+];
+    
+    // Brand name from URL
+    const params = new URLSearchParams(window.location.search);
+    const brandName = params.get('brand') || "All Brands";
+    document.getElementById("brand-title").innerText = brandName;
+    
+    // Generate products
+    const container = document.getElementById("brand-products");
+    
+    products
+  .filter(p => brandName === "All Brands" || p.brand === brandName)
+  .forEach(p => {
+    const div = document.createElement("div");
+    div.classList.add("product-card");
+    div.setAttribute("data-id", p.id);
+    div.setAttribute("data-price", p.price);
+    div.setAttribute("data-brand", p.brand);
+    div.setAttribute("data-name", p.name);
+    div.innerHTML = `
+      <div class="product-img-wrapper">
+        <img src="${p.img}" alt="${p.name}">
+        <div class="icon-group">
+          <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+          <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+        </div>
+      </div>
+      <div class="product-info">
+        <h3 class="product-name">${p.name}</h3>
+        <p class="desc">${p.dec}</p>
+        <div class="price"><span class="current">$${p.price}</span></div>
+      </div>
+      <div class="product-actions">
+        <button class="add-to-cart-btn">
+          <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+        </button>
+      </div>
+    `;
+    container.appendChild(div);
+
+    // ✅ Ye line important hai
+    setupProductCardEvents(div);
+});
+    
+    // ==========================
+    // 2️⃣ Helper: Notifications
+    // ==========================
+    function showNotification(text){
+      const notif = document.getElementById("notification");
+      notif.innerText = text;
+      notif.style.display = "block";
+      notif.style.opacity = "1";
+      setTimeout(()=>{
+        notif.style.opacity = "0";
+        setTimeout(()=>{notif.style.display="none"},500);
+      },1500);
+    }
+    
+    
+    
+// ==========================
+// 3️⃣ Wishlist / Heart
+// ==========================
+document.querySelectorAll(".heart-icon").forEach(icon => {
+
+icon.addEventListener("click", () => {
+
+  if (!checkLogin()) return;
+
+  const card = icon.closest(".product-card");
+  const productName = card.querySelector(".product-name").innerText;
+  const id = card.dataset.id;
+
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+  if (icon.classList.contains("active")) {
+
+    icon.classList.remove("active","fa-solid");
+    icon.classList.add("fa-regular");
+
+    wishlist = wishlist.filter(p => p.id != id);
+
+    showNotification(productName + " removed from wishlist");
+
+  } else {
+
+    icon.classList.add("active","fa-solid");
+    icon.classList.remove("fa-regular");
+
+    wishlist.push({
+      id: id,
+      name: productName
+    });
+
+    showNotification(productName + " added to wishlist");
+
+  }
+
+  localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
+  document.querySelector(".heart-count").innerText = wishlist.length;
+
+});
+
+});
+
+    // ==========================
+    // 4️⃣ Brand Products Events
+    // ==========================
+    document.querySelectorAll(".product-card").forEach(card => {
+    
+      const addBtn = card.querySelector(".add-to-cart-btn");
+      const heartBtn = card.querySelector(".heart-icon");
+      // const compareBtn = card.querySelector(".compare-icon");
+      const productId = card.dataset.id;
+      const productName = card.querySelector(".product-name").innerText;
+      const price = parseFloat(card.dataset.price || 0);
+      const img = card.querySelector("img").src;
+    
+      addBtn.addEventListener("click", (e)=>{
+    e.stopPropagation();
+    if(!checkLogin()) return; // 🔒 protect
+
+    let exist = cart.find(p=>p.id===productId);
+    if(exist){
+        // agar already cart me hai → quantity +1
+        exist.quantity = Number(exist.quantity || 1) + 1;
+    } else {
+        cart.push({ id: productId, name: productName, price, quantity:1, img });
+    }
+
+    // Save cart
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Update navbar badge
+    updateNavBadges();
+
+    // Button animation
+    addBtn.classList.add("active");
+    addBtn.innerHTML = "✔ Added!";
+    showNotification(productName+" added to cart!");
+
+    setTimeout(()=>{
+        addBtn.classList.remove("active");
+        addBtn.classList.add("done");
+        addBtn.innerHTML = `<i class="fa-solid fa-cart-arrow-down"></i> Add to Cart`;
+    },1500);
+});
+    
+   
+    });
+    
+// ==========================
+// 9️⃣ Cart Button & Count
+// ==========================
+document.addEventListener("DOMContentLoaded",()=>{
+  const cartCountEl=document.querySelector(".cart-count");
+  document.querySelectorAll(".add-to-cart-btn")?.forEach(btn=>{
+    btn.addEventListener("click",(e)=>{
+      e.stopPropagation();
+      const card=btn.closest(".product-card");
+      const name=card.querySelector(".product-name").innerText;
+      const price=parseFloat(card.querySelector(".current")?.innerText.replace(/[^0-9.]/g,""))||0;
+      const img=card.querySelector("img")?.src;
+      const id=card.dataset.id;
+      let cart=JSON.parse(localStorage.getItem("cart")||"[]");
+      let product={id,name,price,quantity:1,img};
+      let exist=cart.find(p=>p.id===id);
+      if(exist) exist.quantity=(exist.quantity||0)+1; else cart.push(product);
+      localStorage.setItem("cart",JSON.stringify(cart));
+      if(cartCountEl) cartCountEl.innerText=cart.reduce((acc,i)=>acc+Number(i.quantity||0),0);
+      btn.innerHTML="✔ Added!";
+      btn.style.background="#28a745";
+      setTimeout(()=>{ btn.innerHTML='<i class="fa-solid fa-cart-arrow-down"></i> Add to Cart'; btn.style.background="linear-gradient(45deg,#22d3ff,#1ab7e3)"; },2500);
+      showNotification(name+" added to cart");
+    });
+  });
+});
+
+// Cart count update function
+function updateCartCount(){
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const total = cart.reduce((acc, item) => acc + item.quantity, 0);
+    document.querySelector(".cart-count").innerText = total;
+}
+
+// Page load pe call karo
+window.addEventListener("load", updateCartCount);
+
+    
+   
+// ==========================
+// 1️⃣1️⃣ Compare System (2 products only)
+// ==========================
+// localStorage.removeItem("compare");
+// const productCards = document.querySelectorAll(".product-card");
+// const compareBtn = document.getElementById("compare-now-btn");
+
+// function loadCompare() { return JSON.parse(localStorage.getItem("compare") || "[]"); }
+// function saveCompare(list) { localStorage.setItem("compare", JSON.stringify(list)); }
+// function updateCompareBtn(list) { compareBtn.style.display = list.length === 2 ? "block" : "none"; }
+
+// let compareList = loadCompare();
+// updateCompareBtn(compareList);
+
+// productCards.forEach(card => {
+//     const compareIcon = card.querySelector(".compare-icon");
+//     if (compareList.find(p => p.id == card.dataset.id)) compareIcon.classList.add("active");
+
+//     compareIcon.addEventListener("click", () => {
+//         const id = card.dataset.id;
+//         let exist = compareList.find(p => p.id == id);
+//         if (exist) {
+//             compareList = compareList.filter(p => p.id != id);
+//             compareIcon.classList.remove("active");
+//         } else {
+//             if (compareList.length >= 2) { alert("You can only compare 2 products!"); return; }
+//             compareList.push({
+//                 id,
+//                 name: card.querySelector(".product-name").textContent,
+//                 price: parseFloat(card.dataset.price || 0),
+//                 rating: card.dataset.rating,
+//                 img: card.querySelector("img").src,
+//                 desc: card.querySelector(".desc").textContent,
+//                 model: card.dataset.model || "",
+//                 ram: card.dataset.ram || "",
+//                 rom: card.dataset.rom || "",
+//                 category: card.dataset.category || ""
+//             });
+//             compareIcon.classList.add("active");
+//         }
+//         saveCompare(compareList);
+//         updateCompareBtn(compareList);
+//     });
+// });
+
+// compareBtn.addEventListener("click", () => {
+//     if (compareList.length === 2) window.location.href = "compare.html";
+// });
+
+// // Store all products for compare page
+// localStorage.setItem("compareProducts", JSON.stringify(Array.from(productCards).map(card => ({
+//     id: card.dataset.id,
+//     name: card.querySelector(".product-name").textContent,
+//     price: parseFloat(card.dataset.price || 0),
+//     rating: card.dataset.rating,
+//     img: card.querySelector("img").src,
+//     desc: card.querySelector(".desc").textContent,
+//     model: card.dataset.model || "",
+//     ram: card.dataset.ram || "",
+//     rom: card.dataset.rom || "",
+//     category: card.dataset.category || ""
+// }))));
+
+const compareBtn = document.getElementById("compare-now-btn");
+
+// Load compare list from localStorage
+function loadCompare() {
+    return JSON.parse(localStorage.getItem("compare") || "[]");
+}
+
+// Save compare list to localStorage
+function saveCompare(list) {
+    localStorage.setItem("compare", JSON.stringify(list));
+}
+
+// Update compare button visibility
+function updateCompareBtn() {
+    const list = loadCompare();
+    compareBtn.style.display = list.length === 2 ? "block" : "none";
+}
+
+// Setup compare for a single product card
+function setupCompare(card) {
+    const compareIcon = card.querySelector(".compare-icon");
+    if(!compareIcon) return;
+
+    // Initial state based on localStorage
+    const compareList = loadCompare();
+    if(compareList.find(p => p.id == card.dataset.id)) {
+        compareIcon.classList.add("active");
+    }
+
+    compareIcon.addEventListener("click", (e) => {
+        e.stopPropagation();
+        let compareList = loadCompare();
+        const id = card.dataset.id;
+
+        let exist = compareList.find(p => p.id == id);
+        if (exist) {
+            compareList = compareList.filter(p => p.id != id);
+            compareIcon.classList.remove("active");
+        } else {
+            if (compareList.length >= 2) { 
+                alert("You can only compare 2 products!"); 
+                return; 
+            }
+            compareList.push({
+                id,
+                name: card.querySelector(".product-name").textContent,
+                price: parseFloat(card.dataset.price || 0),
+                rating: card.dataset.rating,
+                img: card.querySelector("img").src,
+                desc: card.querySelector(".desc").textContent,
+                model: card.dataset.model || "",
+                ram: card.dataset.ram || "",
+                rom: card.dataset.rom || "",
+                category: card.dataset.category || ""
+            });
+            compareIcon.classList.add("active");
+        }
+
+        saveCompare(compareList);
+        updateCompareBtn();
+    });
+}
+
+// Call this on **all existing and new product cards**
+function setupAllCompare() {
+    const productCards = document.querySelectorAll(".product-card");
+    productCards.forEach(card => setupCompare(card));
+}
+
+// Compare button click
+compareBtn.addEventListener("click", () => {
+    const list = loadCompare();
+    if(list.length === 2){
+        window.location.href = "compare.html";
+    }
+});
+
+// Store all products for compare page
+function storeAllProductsForCompare() {
+    const productCards = document.querySelectorAll(".product-card");
+    const products = Array.from(productCards).map(card => ({
+        id: card.dataset.id,
+        name: card.querySelector(".product-name").textContent,
+        price: parseFloat(card.dataset.price || 0),
+        rating: card.dataset.rating,
+        img: card.querySelector("img").src,
+        desc: card.querySelector(".desc").textContent,
+        model: card.dataset.model || "",
+        ram: card.dataset.ram || "",
+        rom: card.dataset.rom || "",
+        category: card.dataset.category || ""
+    }));
+    localStorage.setItem("compareProducts", JSON.stringify(products));
+}
+
+// **Initial load**
+updateCompareBtn();
+setupAllCompare();
+storeAllProductsForCompare();
+    // ==========================
+    // 6️⃣ Login / Logout
+    // ==========================
+    const loginIcon = document.getElementById("login-name");
+    const loginBtn = document.getElementById("loginBtn");
+    const logoutBtn = document.getElementById("logoutBtn");
+    
+    const mobileLoginIcon = document.querySelector(".mobile-login-name");
+    const mobileLoginBtn = document.querySelector(".mobile-login");
+    const mobileLogoutBtn = document.querySelector(".mobile-logout");
+    
+    function updateLogin(){
+      const username = localStorage.getItem("username");
+      if(username){
+        loginIcon.innerText = username;
+        loginBtn.style.cursor = "default";
+        loginBtn.onclick = ()=>alert("Already logged in ✅");
+        if(logoutBtn) logoutBtn.style.display = "inline";
+    
+        mobileLoginIcon.innerText = username;
+        mobileLoginBtn.style.cursor = "default";
+        mobileLoginBtn.onclick = ()=>alert("Already logged in ✅");
+        if(mobileLogoutBtn) mobileLogoutBtn.style.display = "flex";
+      } else {
+        loginIcon.innerText = "Login";
+        loginBtn.style.cursor = "pointer";
+        loginBtn.onclick = ()=>{ sessionStorage.setItem("redirectAfterLogin", window.location.href); window.location.href="login.html"; };
+        if(logoutBtn) logoutBtn.style.display = "none";
+    
+        mobileLoginIcon.innerText = "Login";
+        mobileLoginBtn.style.cursor = "pointer";
+        mobileLoginBtn.onclick = ()=>{ sessionStorage.setItem("redirectAfterLogin", window.location.href); window.location.href="login.html"; };
+        if(mobileLogoutBtn) mobileLogoutBtn.style.display = "none";
+      }
+    }
+    updateLogin();
+    
+    function logoutUser(){
+      localStorage.removeItem("username");
+      localStorage.removeItem("cart");
+      localStorage.removeItem("wishlist");
+      localStorage.removeItem("compare");
+      alert("Logged out successfully!");
+      updateLogin();
+      location.reload();
+    }
+    if(logoutBtn) logoutBtn.addEventListener("click", logoutUser);
+    if(mobileLogoutBtn) mobileLogoutBtn.addEventListener("click", logoutUser);
+    
+    function checkLogin(){
+      if(!localStorage.getItem("username")){
+        sessionStorage.setItem("redirectAfterLogin", window.location.href);
+        window.location.href="login.html";
+        return false;
+      }
+      return true;
+    }
+// log in code 
+    function checkLogin(){
+    const username = localStorage.getItem("username");
+    if(!username){
+        sessionStorage.setItem("redirectAfterLogin", window.location.href); // redirect back after login
+        window.location.href = "login.html";
+        return false;
+    }
+    return true;
+}
+// back karne per login page nahi aye ga 
+window.addEventListener("load", () => {
+    const username = localStorage.getItem("username");
+    if(!username){
+        sessionStorage.setItem("redirectAfterLogin", window.location.href);
+        // window.location.href = "login.html";
+    }
+});
+
+// btn filter
+const brands = ["All Brands", "Samsung", "Apple", "Huawei","HP","Dell"]; // yahan sab brands add karo
+const brandNav = document.getElementById("brand-nav");
+const container1 = document.getElementById("brand-products");
+
+// 1️⃣ Brand buttons generate
+brands.forEach(brand => {
+    const btn = document.createElement("button");
+    btn.innerText = brand;
+    if(brand === "All Brands") btn.classList.add("active"); // default
+    btn.addEventListener("click", () => {
+        // Remove active from all
+        document.querySelectorAll("#brand-nav button").forEach(b=>b.classList.remove("active"));
+        btn.classList.add("active");
+
+        // Filter products
+        container1.innerHTML = ""; // clear previous
+        const filtered = products.filter(p => brand === "All Brands" || p.brand === brand);
+
+        filtered.forEach(p => {
+            const div = document.createElement("div");
+            div.classList.add("product-card");
+            div.setAttribute("data-id", p.id);
+            div.setAttribute("data-price", p.price);
+            div.setAttribute("data-brand", p.brand);
+            div.setAttribute("data-name", p.name);
+            div.innerHTML = `
+                <div class="product-img-wrapper">
+                    <img src="${p.img}" alt="${p.name}">
+                    <div class="icon-group">
+                        <i class="fa-solid fa-code-compare compare-icon" title="Compare"></i>
+                        <i class="fa-regular fa-heart heart-icon" title="Add to Wishlist"></i>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">${p.name}</h3>
+                    <p class="desc">${p.dec}</p>
+                    <div class="price"><span class="current">$${p.price}</span></div>
+                </div>
+                <div class="product-actions">
+                    <button class="add-to-cart-btn">
+                        <i class="fa-solid fa-cart-arrow-down"></i> Add to Cart
+                    </button>
+                </div>
+            `;
+            container1.appendChild(div);
+
+            // 🔒 Brand page ke events (Add to Cart / Wishlist / Compare) call karo
+            setupProductCardEvents(div);
+        });
+    });
+    brandNav.appendChild(btn);
+});
+function setupProductCardEvents(card){
+    const addBtn = card.querySelector(".add-to-cart-btn");
+    const heartBtn = card.querySelector(".heart-icon");
+    const compareBtn = card.querySelector(".compare-icon");
+    const productId = card.dataset.id;
+    const productName = card.querySelector(".product-name").innerText;
+    const price = parseFloat(card.dataset.price || 0);
+    const img = card.querySelector("img").src;
+
+    // Add to Cart
+    addBtn.addEventListener("click", e => {
+        e.stopPropagation();
+        if(!checkLogin()) return;
+
+        let exist = cart.find(p=>p.id===productId);
+        if(exist){
+            exist.quantity = Number(exist.quantity || 1) + 1;
+        } else {
+            cart.push({ id: productId, name: productName, price, quantity:1, img });
+        }
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateNavBadges();
+        addBtn.classList.add("active");
+        addBtn.innerHTML = "✔ Added!";
+        showNotification(productName+" added to cart!");
+        setTimeout(()=>{
+            addBtn.classList.remove("active");
+            addBtn.classList.add("done");
+            addBtn.innerHTML = `<i class="fa-solid fa-cart-arrow-down"></i> Add to Cart`;
+        },1500);
+    });
+
+    
+    // Compare
+    compareBtn.addEventListener("click", () => {
+        if(!checkLogin()) return;
+
+        let exist = compareList.find(p => p.id===productId);
+        if(exist){
+            compareList = compareList.filter(p => p.id!==productId);
+            compareBtn.classList.remove("active");
+        } else {
+            if(compareList.length >= 2){ alert("Max 2 products to compare"); return; }
+            compareList.push({ id: productId, name: productName, price, img });
+            compareBtn.classList.add("active");
+        }
+        localStorage.setItem("compare", JSON.stringify(compareList));
+        document.getElementById("compare-now-btn").style.display = compareList.length===2 ? "block":"none";
+    });
+
+    // Card click → product page
+    card.addEventListener("click",(e)=>{
+        if(e.target.closest(".add-to-cart-btn") || e.target.closest(".heart-icon") || e.target.closest(".compare-icon")) return;
+        sessionStorage.setItem("currentProduct", JSON.stringify({ id: productId, name: productName, price, img }));
+        window.location.href = `product-details1.html?id=${productId}`;
+    });
+}
+
+
+
+
+
+
+
+    </script>
+  
+</body>
+</html>

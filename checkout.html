@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart - GEARNIX</title>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:#0f1424;
+      color:#fff;
+    }
+
+    h2{
+      text-align:center;
+      font-size:2rem;
+      color:#22d3ff;
+      margin:20px 0;
+    }
+
+    .cart-container{
+      max-width:1200px;
+      margin:auto;
+      padding:20px;
+    }
+
+    .cart-table{
+      width:100%;
+      border-collapse: collapse;
+    }
+
+    .cart-table th, .cart-table td{
+      padding:15px;
+      text-align:left;
+      border-bottom:1px solid rgba(255,255,255,0.2);
+    }
+
+    .cart-table th{
+      color:#22d3ff;
+    }
+
+    .cart-product{
+      display:flex;
+      align-items:center;
+      gap:15px;
+    }
+
+    .cart-product img{
+      width:80px;
+      height:80px;
+      object-fit:contain;
+      border-radius:10px;
+      background:#1b2238;
+      padding:5px;
+    }
+
+    .quantity input{
+      width:50px;
+      text-align:center;
+      padding:5px;
+      border:none;
+      border-radius:5px;
+      background:#11162a;
+      color:#fff;
+    }
+
+    .quantity button{
+      padding:5px 10px;
+      border:none;
+      background:#22d3ff;
+      color:#11162a;
+      cursor:pointer;
+      font-weight:bold;
+      border-radius:5px;
+      margin:0 5px;
+    }
+
+    .remove-btn{
+      cursor:pointer;
+      color:#ff3fb4;
+      font-size:1.2rem;
+      transition:0.3s;
+    }
+
+    .remove-btn:hover{
+      color:#ff69b4;
+    }
+
+    .cart-summary{
+      margin-top:30px;
+      text-align:right;
+      font-size:1.2rem;
+    }
+
+    .checkout-btn{
+      margin-top:10px;
+      padding:14px 25px;
+      background:linear-gradient(45deg,#22d3ff,#1ab7e3);
+      border:none;
+      border-radius:10px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+      font-size:1rem;
+    }
+
+    .checkout-btn:active{
+      transform:scale(0.95);
+    }
+  </style>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+<header class="main-navbar">
+  <!-- LEFT: Logo -->
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+  </div>
+
+  <!-- CENTER: Nav Links -->
+  <nav class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="product.html">Products</a>
+    <a href="brands.html">Brands</a>
+    <a href="compare.html">Compare</a>
+    <!-- <a href="checkout.html">Check out</a> -->
+    <a href="about.html">About</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+
+  <!-- RIGHT: Icons -->
+  <div class="nav-icons">
+    <!-- SEARCH -->
+    <div class="search-wrapper">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" placeholder="Search products..." id="searchInput" class="search-input">
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+
+    <!-- HEART / Wishlist -->
+    <div class="icon-wrapper">
+      <i class="fa-regular fa-heart heart-icon"></i>
+      <span class="nav-badge heart-count">0</span>
+    </div>
+
+    <!-- CART -->
+    <div class="icon-wrapper">
+      <i class="fa-solid fa-cart-shopping cart-icon"></i>
+      <span class="nav-badge cart-count">0</span>
+    </div>
+
+   
+
+    <span class="login" id="loginBtn">
+      <i class="fa-solid fa-circle-user"></i>
+      <span id="login-name">My Account</span>
+    </span>
+    <span id="logoutBtn" style="cursor: pointer; "> <i class="fas fa-sign-out"></i></span>
+
+    <!-- MOBILE TOGGLE -->
+  </div>
+  <i class="fa-solid fa-bars mobile-toggle"></i>
+</header>
+
+<!-- ✅ MOBILE MENU (NEW) -->
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <!-- Close button -->
+  <i class="fa-solid fa-xmark close-mobile" id="closeMobile"></i>
+
+  <!-- Top: Profile + Search -->
+  <div class="mobile-top">
+    <div class="mobile-profile">
+      <!-- <i class="fa-solid fa-circle-user"></i>
+      <span id="login-name">My Account</span> -->
+      <span class="mobile-login" id="mobileLoginBtn">
+        <i class="fa-solid fa-circle-user"></i>
+        <span class="mobile-login-name">My Account</span>
+      </span>
+      </span>
+    </div>
+    
+    <div class="mobile-search">
+      <input type="text" placeholder="Search products...">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+
+  <!-- Nav Links -->
+  <nav class="mobile-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="product.html">Products</a>
+    <a href="compare.html">Compare</a>
+    <a href="About">Check out</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+
+  <!-- Bottom: Logout -->
+  <div class="mobile-logout">
+    <i class="fas fa-sign-out"></i>
+    <span>Logout</span>
+  </div>
+</div>
+
+  <h2>Your Cart</h2>
+
+  <div class="cart-container">
+    <table class="cart-table">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody id="cart-body">
+        <!-- Cart items will be injected here by JS -->
+      </tbody>
+    </table>
+
+    <div class="cart-summary">
+      <div id="cart-total">Total: $0</div>
+      <button class="checkout-btn" onclick="checkout()">Buy Now</button>
+      <!-- <button class="checkout-btn" onclick="checkout()">Checkout</button> -->
+    </div>
+  </div>
+  <footer class="site-footer">
+
+    <div class="footer-container">
+  
+      <!-- ABOUT -->
+      <div class="footer-col about">
+        <img src="images/l" alt="">
+        <p>Your ultimate destination for gaming gear and tech. Quality products, fast delivery, and trusted by gamers worldwide.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+  
+        <div class="newsletter">
+          <button onclick="window.location.href='mailto:support@gearnix.com?subject=Newsletter Subscription&body=I want to subscribe to GearNix newsletter';">
+            Subscribe via Email
+          </button>
+        </div>
+      </div>
+  
+      <!-- QUICK LINKS -->
+      <div class="footer-col links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="brands.html">Brand</a></li>
+          <li><a href="compare.html">Comapre</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- CUSTOMER SERVICE -->
+      <div class="footer-col support">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Order Tracking</a></li>
+        </ul>
+      </div>
+  
+      <!-- CONTACT -->
+      <div class="footer-col contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@gearnix.com</p>
+        <p>Phone: +92 300 1234567</p>
+        <p>Address: Karachi, Pakistan</p>
+      </div>
+  
+    </div>
+  
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 GearNix. All rights reserved.</p>
+    </div>
+  
+  </footer>
+
+  <script>
+
+
+
+
+const navLinks = document.querySelectorAll(".nav-links a");
+const currentPath = window.location.pathname.split("/").pop(); // current page file
+
+navLinks.forEach(link => {
+    const linkPath = link.getAttribute("href");
+    if(linkPath === currentPath){
+        link.classList.add("active");
+    } else {
+        link.classList.remove("active");
+    }
+});
+
+
+
+    // Sample cart data (simulate Add to Cart)
+    let cart = JSON.parse(localStorage.getItem("cart")) || [
+      {id:1,name:"HP Laptop - 14s",price:899,img:"images/hp/hp (1).png",quantity:1},
+      {id:2,name:"Huawei nova 13i",price:999,img:"images/huawei/huawei.png",quantity:2}
+    ];
+
+    const cartBody = document.getElementById("cart-body");
+    const cartTotal = document.getElementById("cart-total");
+
+    function renderCart(){
+      cartBody.innerHTML = "";
+      let total = 0;
+      cart.forEach((item,index)=>{
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>
+            <div class="cart-product">
+              <img src="${item.img}" alt="${item.name}">
+              <span>${item.name}</span>
+            </div>
+          </td>
+          <td>$${item.price}</td>
+          <td>
+            <div class="quantity">
+              <button onclick="decreaseQty(${index})">-</button>
+              <input type="text" value="${item.quantity}" readonly>
+              <button onclick="increaseQty(${index})">+</button>
+            </div>
+          </td>
+          <td>$${itemTotal}</td>
+          <td><i class="fa-solid fa-trash remove-btn" onclick="removeItem(${index})"></i></td>
+        `;
+        cartBody.appendChild(tr);
+      });
+      cartTotal.textContent = "Total: $" + total;
+    }
+
+    function increaseQty(index){
+      cart[index].quantity +=1;
+      saveCart();
+      renderCart();
+    }
+
+    function decreaseQty(index){
+      if(cart[index].quantity>1){
+        cart[index].quantity -=1;
+        saveCart();
+        renderCart();
+      }
+    }
+
+    function removeItem(index){
+      cart.splice(index,1);
+      saveCart();
+      renderCart();
+    }
+
+    function saveCart(){
+      localStorage.setItem("cart",JSON.stringify(cart));
+    }
+
+    function checkout(){
+      if(cart.length===0){
+        alert("Cart is empty!");
+        return;
+      }
+      alert("Order placed successfully! Total: $" + cart.reduce((sum,item)=>sum+item.price*item.quantity,0));
+      cart=[];
+      saveCart();
+      renderCart();
+    }
+
+    renderCart();
+
+    window.addEventListener("DOMContentLoaded", () => {
+    const loginIcon = document.getElementById("login-name"); // desktop
+    const loginBtn = document.getElementById("loginBtn");
+    const logoutBtn = document.getElementById("logoutBtn");
+
+    const mobileLoginIcon = document.querySelector(".mobile-login-name"); // mobile
+    const mobileLoginBtn = document.querySelector(".mobile-login");
+    const mobileLogoutBtn = document.querySelector(".mobile-logout");
+
+    console.log("Login icon element:", loginIcon);
+    console.log("Username from localStorage:", localStorage.getItem("username")); // check
+
+    function updateLogin() {
+        const username = localStorage.getItem("username");
+        console.log("Updating login with:", username); // debug
+
+        if (!loginIcon || !mobileLoginIcon) return; // safety check
+
+        if (username) {
+            loginIcon.innerText = username;
+            loginBtn.onclick = () => alert("Already logged in ✅");
+            if (logoutBtn) logoutBtn.style.display = "inline";
+
+            mobileLoginIcon.innerText = username;
+            mobileLoginBtn.onclick = () => alert("Already logged in ✅");
+            if (mobileLogoutBtn) mobileLogoutBtn.style.display = "flex";
+        } else {
+            loginIcon.innerText = "Login";
+            loginBtn.onclick = () => window.location.href = "login.html";
+            if (logoutBtn) logoutBtn.style.display = "none";
+
+            mobileLoginIcon.innerText = "Login";
+            mobileLoginBtn.onclick = () => window.location.href = "login.html";
+            if (mobileLogoutBtn) mobileLogoutBtn.style.display = "none";
+        }
+    }
+
+    updateLogin();
+});
+
+function checkLogin() {
+    if (!localStorage.getItem("username")) {
+        sessionStorage.setItem("redirectAfterLogin", window.location.href);
+        window.location.href = "login.html";
+        return false;
+    }
+    return true;
+}
+
+
+    
+  </script>
+
+  
+
+</body>
+</html>

@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - GEARNIX</title>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- <style>
+    body{
+      margin:0;
+      font-family:'Poppins',sans-serif;
+      background:#0f1424;
+      color:#fff;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:30px 20px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:40px;
+    }
+
+    /* IMAGE SLIDER */
+    .product-images{
+      flex:1 1 400px;
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    .main-image{
+      width:100%;
+      height:400px;
+      background:#1b2238;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border-radius:16px;
+      overflow:hidden;
+    }
+
+    .main-image img{
+      max-width:100%;
+      max-height:100%;
+      object-fit:contain;
+      transition:0.3s;
+    }
+
+    .thumb-images{
+      display:flex;
+      gap:10px;
+    }
+
+    .thumb-images img{
+      width:60px;
+      height:60px;
+      object-fit:contain;
+      cursor:pointer;
+      border-radius:10px;
+      border:2px solid transparent;
+      transition:0.3s;
+    }
+
+    .thumb-images img.active{
+      border-color:#22d3ff;
+      transform:scale(1.1);
+    }
+
+    /* PRODUCT INFO */
+    .product-info{
+      flex:1 1 400px;
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    .product-name{
+      font-size:2rem;
+      color:#22d3ff;
+    }
+
+    .rating{
+      color:#ffd700;
+      font-size:1.1rem;
+    }
+
+    .price{
+      font-size:1.5rem;
+      font-weight:bold;
+      color:#fff;
+    }
+
+    .price del{
+      color:#888;
+      font-size:1.2rem;
+      margin-left:10px;
+    }
+
+    .desc{
+      font-size:1rem;
+      color:#b8c1d9;
+    }
+
+    .specs{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 30px;
+      font-size:0.95rem;
+      color:#a7b0c6;
+    }
+
+    /* ACTIONS */
+    .actions{
+      display:flex;
+      flex-direction: column;
+      /* justify-content: ; */
+      gap:15px;
+      /* align-items:center; */
+      margin-top:20px;
+    }
+
+    .quantity{
+      display:flex;
+      align-items:center;
+      background:#1b2238;
+      border-radius:10px;
+      overflow:hidden;
+    }
+
+    .quantity button{
+      padding:10px 15px;
+      background:#22d3ff;
+      border:none;
+      cursor:pointer;
+      color:#11162a;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .quantity input{
+      width:50px;
+      text-align:center;
+      border:none;
+      padding: 10px;
+      background:#11162a;
+      color:#fff;
+    }
+    #download-word{
+      background:#22d3ff; 
+      color:#11162a;
+       padding:10px 15px;
+        border:none; 
+       border-radius:10px; cursor:pointer; 
+       font-weight:bold; 
+    }
+    
+
+    .actions .add-to-cart-btn{
+  padding:14px 25px;
+  background: linear-gradient(45deg, #ff69b4, #ff1493); /* Pink shades */
+  border:none;
+  border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:0.3s;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-left: 10px;
+}
+
+    .add-to-cart-btn:active{
+      transform:scale(0.95);
+    }
+
+
+    .icon-group{
+      display:flex;
+      gap:10px;
+    }
+
+    .icon-group i{
+      width:40px;
+      height:40px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(0,0,0,0.6);
+      border-radius:50%;
+      cursor:pointer;
+      font-size:18px;
+      color:#22d3ff;
+      transition:0.3s;
+    }
+
+    .icon-group i.active{
+      background:#22d3ff;
+      color:#fff;
+      transform:scale(1.15);
+    }
+
+  </style> -->
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+     
+<!-- NAVBAR -->
+<header class="main-navbar" data-aos="fade-down">
+  <!-- LEFT: Logo -->
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+  </div>
+
+  <!-- CENTER: Nav Links -->
+  <nav class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="product.html">Products</a>
+    <a href="brands.html">Brands</a>
+    <a href="compare.html">Compare</a>
+    <!-- <a href="checkout.html">Check out</a> -->
+    <a href="about.html">About</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+
+  <!-- RIGHT: Icons -->
+  <div class="nav-icons">
+    <!-- SEARCH -->
+    <div class="search-wrapper">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" placeholder="Search products..." id="searchInput" class="search-input">
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+
+    <!-- HEART / Wishlist -->
+    <div class="icon-wrapper">
+      <i class="fa-regular fa-heart heart-icon"></i>
+      <span class="nav-badge heart-count">0</span>
+    </div>
+
+    <!-- CART -->
+    <div class="icon-wrapper">
+      <i class="fa-solid fa-cart-shopping cart-icon"></i>
+      <span class="nav-badge cart-count">0</span>
+    </div>
+
+   
+
+    <span class="login" id="loginBtn">
+      <i class="fa-solid fa-circle-user"></i>
+      <span id="login-name">My Account</span>
+    </span>
+    <span id="logoutBtn" style="cursor: pointer; "> <i class="fas fa-sign-out"></i></span>
+
+    <!-- MOBILE TOGGLE -->
+  </div>
+  <i class="fa-solid fa-bars mobile-toggle"></i>
+</header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <!-- Close button -->
+  <i class="fa-solid fa-xmark close-mobile" id="closeMobile"></i>
+
+  <!-- Top: Profile + Search -->
+  <div class="mobile-top">
+    <div class="mobile-profile">
+      <!-- <i class="fa-solid fa-circle-user"></i>
+      <span id="login-name">My Account</span> -->
+      <span class="mobile-login" id="mobileLoginBtn">
+        <i class="fa-solid fa-circle-user"></i>
+        <span class="mobile-login-name">My Account</span>
+      </span>
+      </span>
+    </div>
+    
+    <div class="mobile-search">
+      <input type="text" placeholder="Search products...">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+
+  <!-- Nav Links -->
+  <nav class="mobile-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="product.html">Products</a>
+    <a href="compare.html">Compare</a>
+    <a href="About">Check out</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+
+  <!-- Bottom: Logout -->
+  <div class="mobile-logout">
+    <i class="fas fa-sign-out"></i>
+    <span>Logout</span>
+  </div>
+</div>
+
+  <div class="container">
+    <!-- IMAGE SLIDER -->
+    <div class="product-images">
+      <div class="main-image">
+        <img src="images/hp/hp (1).png" alt="HP Laptop" id="main-product-image">
+      </div>
+      <div class="thumb-images">
+        <img src="images/hp/hp (1).png" class="active">
+        <img src="images/hp/hp (2).png">
+        <img src="images/hp/hp (3).png">
+      </div>
+    </div>
+
+    <!-- PRODUCT INFO -->
+    <div class="product-info">
+      <h2 class="product-name">HP Laptop - 14s</h2>
+      <div class="rating">⭐⭐⭐⭐☆ <span>(120 reviews)</span></div>
+      <div class="price">$899 <del>$999</del></div>
+      <p class="desc">The HP 14s-dq3001na is a compact and reliable 14-inch laptop powered by the Intel N4500 processor. Perfect for students and professionals.</p>
+
+      <div class="specs">
+        <div>RAM: 8GB</div>
+        <div>Storage: 256GB SSD</div>
+        <div>Display: 14" FHD</div>
+        <div>Processor: Intel N4500</div>
+      </div>
+
+      <div class="actions">
+        <div class="quantity">
+          <button id="minus">-</button>
+          <input type="text" value="1" id="quantity">
+          <button id="plus">+</button>
+          <button class="add-to-cart-btn"><i class="fa-solid fa-cart-arrow-down"></i> Add to Cart</button>
+        </div>
+<!-- Word Download Button -->
+<button id="download-word" title="Download Product Info" >
+  <i class="fa-regular fa-file-word"></i> Download Info
+</button>
+       
+
+        <div class="icon-group">
+          <i class="fa-regular fa-heart heart-icon"></i>
+          <i class="fa-solid fa-code-compare compare-icon"></i>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="miniCart" style="position:fixed; right:20px; bottom:20px; background:#11162a; color:#fff; padding:15px; border-radius:10px; display:none; width:300px; box-shadow:0 0 10px #000; z-index:1000;">
+    <div id="miniCartContent"></div>
+    <div style="margin-top:10px; display:flex; justify-content:space-between;">
+      <button id="continueShopping" style="padding:5px 10px; background:#22d3ff; border:none; border-radius:5px; cursor:pointer;">Continue Shopping</button>
+      <button id="goCheckout" style="padding:5px 10px; background:#ff8c00; border:none; border-radius:5px; cursor:pointer;">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Add ye body ke end me, miniCart ke pass -->
+<div id="notification" style="
+position: fixed;
+top: 20px;
+right: 20px;
+background: #22d3ff;
+color: #11162a;
+padding: 12px 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px #000;
+display: none;
+font-weight: bold;
+z-index: 9999;
+transition: opacity 0.5s ease;
+">
+Added to cart!
+</div>
+
+  <footer class="site-footer">
+
+    <div class="footer-container">
+  
+      <!-- ABOUT -->
+      <div class="footer-col about">
+        <img src="images/logo.png" alt="">
+
+        <p>Your ultimate destination for gaming gear and tech. Quality products, fast delivery, and trusted by gamers worldwide.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+  
+        <div class="newsletter">
+          <button onclick="window.location.href='mailto:support@gearnix.com?subject=Newsletter Subscription&body=I want to subscribe to GearNix newsletter';">
+            Subscribe via Email
+          </button>
+        </div>
+      </div>
+  
+      <!-- QUICK LINKS -->
+      <div class="footer-col links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="compare.html">Compare</a></li>
+          <li><a href="checkout.html">Check Out</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- CUSTOMER SERVICE -->
+      <div class="footer-col support">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Order Tracking</a></li>
+        </ul>
+      </div>
+  
+      <!-- CONTACT -->
+      <div class="footer-col contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@gearnix.com</p>
+        <p>Phone: +92 300 1234567</p>
+        <p>Address: Karachi, Pakistan</p>
+      </div>
+  
+    </div>
+  
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 GearNix. All rights reserved.</p>
+    </div>
+  
+  </footer>
+  
+  <script src="products.js"></script>
+  <script>
+
+
+
+  // Navbar link active toggle
+  const navLinks = document.querySelectorAll(".nav-links a");
+const currentPath = window.location.pathname.split("/").pop(); // current page file
+
+navLinks.forEach(link => {
+    const linkPath = link.getAttribute("href");
+    if(linkPath === currentPath){
+        link.classList.add("active");
+    } else {
+        link.classList.remove("active");
+    }
+});
+
+
+// toogle
+const mobileToggle = document.querySelector(".mobile-toggle");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMobile = document.getElementById("closeMobile");
+
+// Open mobile menu
+mobileToggle.addEventListener("click", () => {
+  mobileMenu.classList.add("active");
+});
+
+// Close mobile menu
+closeMobile.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+});
+
+// Optional: click outside menu to close
+window.addEventListener("click", (e) => {
+  if (mobileMenu.classList.contains("active") && !mobileMenu.contains(e.target) && e.target !== mobileToggle) {
+    mobileMenu.classList.remove("active");
+  }
+});
+// Auto-close mobile menu on screen resize
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 900 && mobileMenu.classList.contains("active")) {
+        mobileMenu.classList.remove("active");
+    }
+});
+
+
+  // ==========================
+// 1️⃣ Search Toggle
+// ==========================
+document.querySelector(".search-icon").addEventListener("click", () => {
+    const wrapper = document.querySelector(".search-wrapper");
+    wrapper.classList.toggle("active");
+    wrapper.querySelector("input").focus();
+});
+
+// ==========================
+// 2️⃣ Mobile Menu Toggle
+// ==========================
+document.querySelector(".mobile-toggle").addEventListener("click", () => {
+    document.querySelector(".nav-links").classList.toggle("active");
+});
+
+// ==========================
+// 🔟 Login / Logout
+// ==========================
+// const loginIcon = document.getElementById("login-name");
+// const loginBtn = document.getElementById("loginBtn");
+// const logoutBtn = document.getElementById("logoutBtn");
+
+// Desktop login elements (agar already nahi hain)
+const loginIcon = document.getElementById("login-name"); // desktop header
+const loginBtn = document.getElementById("loginBtn");
+const logoutBtn = document.getElementById("logoutBtn");
+
+// Mobile login elements
+const mobileLoginIcon = document.querySelector(".mobile-login-name");
+const mobileLoginBtn = document.querySelector(".mobile-login");
+const mobileLogoutBtn = document.querySelector(".mobile-logout");
+
+
+function updateLogin() {
+    const username = localStorage.getItem("username");
+
+    if (username) {
+        // Desktop
+        loginIcon.innerText = username;
+        loginBtn.style.cursor = "default";
+        loginBtn.onclick = () => alert("Already logged in ✅");
+        if (logoutBtn) logoutBtn.style.display = "inline";
+
+        // Mobile
+        mobileLoginIcon.innerText = username;
+        mobileLoginBtn.style.cursor = "default";
+        mobileLoginBtn.onclick = () => alert("Already logged in ✅");
+        if (mobileLogoutBtn) mobileLogoutBtn.style.display = "flex"; // flex for mobile logout div
+    } else {
+        // Desktop
+        loginIcon.innerText = "Login";
+        loginBtn.style.cursor = "pointer";
+        loginBtn.onclick = () => {
+            sessionStorage.setItem("redirectAfterLogin", window.location.href);
+            window.location.href = "login.html";
+        };
+        if (logoutBtn) logoutBtn.style.display = "none";
+
+        // Mobile
+        mobileLoginIcon.innerText = "Login";
+        mobileLoginBtn.style.cursor = "pointer";
+        mobileLoginBtn.onclick = () => {
+            sessionStorage.setItem("redirectAfterLogin", window.location.href);
+            window.location.href = "login.html";
+        };
+        if (mobileLogoutBtn) mobileLogoutBtn.style.display = "none";
+    }
+}
+
+
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => logoutUser());
+}
+if (mobileLogoutBtn) {
+    mobileLogoutBtn.addEventListener("click", () => logoutUser());
+}
+
+function logoutUser() {
+    localStorage.removeItem("username");
+    localStorage.removeItem("cart");
+    localStorage.removeItem("wishlist");
+    localStorage.removeItem("compare");
+    alert("Logged out successfully!");
+    updateLogin();
+    location.reload();
+}
+
+    
+    // Get product data from sessionStorage
+const storedProduct = sessionStorage.getItem('currentProduct');
+const currentProduct = storedProduct ? JSON.parse(storedProduct) : null;
+
+if(!currentProduct){
+    alert("❌ Product not found!");
+    window.location.href = "index.html"; // back to index
+}
+
+// Download Word function
+function downloadWord(){
+  if(!currentProduct) return alert("❌ No product selected!");
+  const qty = parseInt(document.getElementById("quantity")?.value || 1);
+
+  const content = `PRODUCT DETAILS
+====================
+Product Name: ${currentProduct.name}
+Description: ${currentProduct.desc}
+Brand: ${currentProduct.brand}
+Category: ${currentProduct.category}
+SKU: ${currentProduct.sku}
+Warranty: ${currentProduct.warranty}
+Stock Status: ${currentProduct.stock}
+Price: $${currentProduct.price.toFixed(2)}
+Quantity: ${qty}
+Total: $${(currentProduct.price * qty).toFixed(2)}
+Main Image: ${currentProduct.img}
+`;
+
+  const blob = new Blob([content], { type: "application/msword" });
+  const link = document.createElement("a");
+  link.href = URL.createObjectURL(blob);
+  link.download = `${currentProduct.name.replace(/\s+/g,"-").toLowerCase()}-details.doc`;
+  link.click();
+}
+
+// Attach to button
+document.getElementById("download-word").addEventListener("click", downloadWord);
+    
+
+
+
+    // IMAGE THUMBNAILS
+    const mainImage = document.getElementById('main-product-image');
+    const thumbs = document.querySelectorAll('.thumb-images img');
+    thumbs.forEach(img => {
+      img.addEventListener('click',()=>{
+        mainImage.src = img.src;
+        thumbs.forEach(i=>i.classList.remove('active'));
+        img.classList.add('active');
+      });
+    });
+
+    // HEART/WISHLIST TOGGLE
+    document.querySelector('.heart-icon').addEventListener('click',()=>{
+      document.querySelector('.heart-icon').classList.toggle('active');
+      document.querySelector('.heart-icon').classList.toggle('fa-solid');
+      document.querySelector('.heart-icon').classList.toggle('fa-regular');
+    });
+
+    // COMPARE TOGGLE
+    document.querySelector('.compare-icon').addEventListener('click',()=>{
+      document.querySelector('.compare-icon').classList.toggle('active');
+    });
+
+    // QUANTITY SELECTOR
+    const minus = document.getElementById('minus');
+    const plus = document.getElementById('plus');
+    const quantityInput = document.getElementById('quantity');
+
+    minus.addEventListener('click',()=>{
+      let val = parseInt(quantityInput.value);
+      if(val>1) quantityInput.value = val-1;
+    });
+
+    plus.addEventListener('click',()=>{
+      let val = parseInt(quantityInput.value);
+      quantityInput.value = val+1;
+    });
+
+    
+  
+
+// ==========================
+// 1️⃣ Check Login & Navbar Update
+// ==========================
+// const loginIcon = document.getElementById("login-name");
+// const loginBtn = document.getElementById("loginBtn");
+// const logoutBtn = document.getElementById("logoutBtn");
+
+// function updateLoginIcon() {
+//     const username = localStorage.getItem("username");
+//     if(username){
+//         loginIcon.innerText = username;
+//         loginBtn.style.cursor = "default";
+//         loginBtn.onclick = () => alert("You are already logged in ✅");
+//         if(logoutBtn) logoutBtn.style.display = "inline";
+//     } else {
+//         loginIcon.innerText = "Login";
+//         loginBtn.style.cursor = "pointer";
+//         loginBtn.onclick = () => {
+//             sessionStorage.setItem("redirectAfterLogin", window.location.href);
+//             window.location.href = "login.html";
+//         };
+//         if(logoutBtn) logoutBtn.style.display = "none";
+//     }
+// }
+// updateLoginIcon();
+
+// // ==========================
+// // 2️⃣ Logout Function
+// // ==========================
+// if(logoutBtn){
+//     logoutBtn.addEventListener("click", () => {
+//         localStorage.removeItem("username");
+//         localStorage.removeItem("cart");
+//         localStorage.removeItem("wishlist");
+//         localStorage.removeItem("compare");
+//         alert("Logged out successfully!");
+//         updateLoginIcon();
+//         location.reload();
+//     });
+// }
+
+// ==========================
+// 3️⃣ Login Check Function
+// ==========================
+function checkLoginAndRedirect(){
+    if(!localStorage.getItem("username")){
+        sessionStorage.setItem("redirectAfterLogin", window.location.href);
+        window.location.href = "login.html";
+        return false;
+    }
+    return true;
+}
+
+
+function updateCartCount(){
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    document.querySelector(".cart-count").innerText = cart.reduce((acc,item)=>acc+item.quantity,0);
+}
+updateCartCount();
+window.addEventListener("DOMContentLoaded", () => {
+  const params = new URLSearchParams(window.location.search);
+  const productId = parseInt(params.get("id"));
+
+  const product = products.find(p => p.id === productId);
+
+  if(!product){
+    document.body.innerHTML = "<h2>Product not found!</h2>";
+    return;
+  }
+
+  // Fill data
+  document.querySelector(".product-name").innerText = product.name;
+  document.querySelector(".price").innerHTML = `$${product.price} <del>$${product.oldPrice}</del>`;
+  document.querySelector(".desc").innerText = product.description;
+
+  // Specs
+  let specsHTML = "";
+  for(let key in product.specs){
+    specsHTML += `<div>${key}: ${product.specs[key]}</div>`;
+  }
+  document.querySelector(".specs").innerHTML = specsHTML;
+
+  // Rating
+  document.querySelector(".rating").innerText = "⭐⭐⭐⭐☆ (" + product.reviews + " reviews)";
+
+  // Main image
+  const mainImage = document.getElementById("main-product-image");
+  mainImage.src = product.img;
+
+  // 
+  // 
+  // Thumbnails
+  const thumbsContainer = document.querySelector(".thumb-images");
+  thumbsContainer.innerHTML = "";
+  product.images.forEach((imgSrc, index)=>{
+    const thumb = document.createElement("img");
+    thumb.src = imgSrc;
+    if(index===0) thumb.classList.add("active");
+    thumb.addEventListener("click", ()=>{
+      mainImage.src = imgSrc;
+      thumbsContainer.querySelectorAll("img").forEach(i=>i.classList.remove("active"));
+      thumb.classList.add("active");
+    });
+    thumbsContainer.appendChild(thumb);
+  });
+});
+
+// JS: notification function
+function showNotification(message) {
+    const notif = document.getElementById("notification");
+    notif.innerText = message;
+    notif.style.display = "block";
+    notif.style.opacity = "1";
+
+    // Auto-hide after 3 seconds
+    setTimeout(() => {
+        notif.style.opacity = "0";
+        setTimeout(() => notif.style.display = "none", 500);
+    }, 3000);
+}
+
+
+const addToCartBtn = document.querySelector(".add-to-cart-btn");
+const miniCart = document.getElementById("miniCart");
+const miniCartContent = document.getElementById("miniCartContent");
+
+addToCartBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    const btn = e.currentTarget;
+    const productName = document.querySelector(".product-name").innerText;
+    const quantity = parseInt(document.getElementById("quantity").value);
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const productId = parseInt(new URLSearchParams(window.location.search).get("id"));
+    const price = parseFloat(document.querySelector(".price").innerText.replace("$",""));
+    const img = document.getElementById("main-product-image").src;
+
+    let exist = cart.find(p => p.id === productId);
+    if(exist){
+        exist.quantity += quantity;
+    } else {
+        cart.push({id: productId, name: productName, price, quantity, img});
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    // Update navbar count
+    document.querySelector(".cart-count").innerText = cart.reduce((acc,item)=>acc+item.quantity,0);
+
+    // Update mini cart content
+    miniCartContent.innerHTML = cart.map(item => `
+        <div style="margin-bottom:10px; display:flex; align-items:center;">
+            <img src="${item.img}" style="width:50px;height:50px;object-fit:contain;margin-right:10px;">
+            <div>
+                <strong>${item.name}</strong><br>
+                Qty: ${item.quantity} | $${(item.price*item.quantity).toFixed(2)}
+            </div>
+        </div>
+    `).join('');
+    miniCart.style.display = "block";
+    setTimeout(()=> miniCart.style.display = "none", 5000);
+
+    // Button animation
+    btn.innerHTML = "✔ Added!";
+    btn.style.background = "#28a745";
+    setTimeout(() => {
+        btn.innerHTML = '<i class="fa-solid fa-cart-arrow-down"></i> Add to Cart';
+        btn.style.background = "linear-gradient(45deg,#22d3ff,#1ab7e3)";
+    }, 2500);
+
+    // Optional alert
+    // alert(productName + " added to cart!");
+    showNotification(productName + " added to cart!");
+});
+
+
+
+// Go to checkout
+document.getElementById("goCheckout").addEventListener("click", ()=>{
+  window.location.href = "checkout.html";
+});
+
+  </script>
+
+
+
+</body>
+</html>

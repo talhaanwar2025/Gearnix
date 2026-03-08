@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - GearNix</title>
+
+  <!-- FONT AWESOME -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- GOOGLE FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- <style>
+    /* GLOBAL */
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:sans-serif;
+      background:#0f1424;
+      color:#fff;
+      /* line-height:1.6; */
+    }
+    a{text-decoration:none;color:inherit;}
+    img{max-width:100%;display:block;}
+
+    /* CONTAINER */
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:50px 20px;
+    }
+
+    /* HEADER */
+    header.main-navbar{
+      /* display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 40px;
+      background:rgba(10,15,30,0.95);
+      position:sticky;
+      top:0;
+      z-index:1000; */
+    }
+    /* header .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+    }
+    header .logo img{
+      width:40px;
+      height:40px;
+      object-fit:contain;
+    }
+    header .nav-links a{
+      margin:0 15px;
+      font-weight:600;
+      transition:0.3s;
+    }
+    header .nav-links a:hover,
+    header .nav-links a.active{
+      color:#22d3ff;
+    } */
+
+    /* HERO / INTRO */
+    .about-hero{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      text-align:center;
+      padding:60px 20px;
+      background:linear-gradient(to right,#0f1424,#1b2238);
+      border-radius:16px;
+      margin-bottom:50px;
+    }
+    .about-hero h1{
+      font-size:3rem;
+      color:#22d3ff;
+      margin-bottom:20px;
+    }
+    .about-hero p{
+      font-size:1.2rem;
+      color:#b8c1d9;
+      max-width:800px;
+    }
+
+    /* SECTIONS */
+    section{
+      margin-bottom:60px;
+    }
+    section h2{
+      font-size:2rem;
+      color:#22d3ff;
+      margin-bottom:25px;
+      text-align:center;
+    }
+    section p{
+      color:#b8c1d9;
+      max-width:900px;
+      margin:auto;
+      text-align:center;
+      margin-bottom:30px;
+    }
+
+    /* VISION / MISSION */
+    .vision-mission{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:30px;
+    }
+    .vision-mission .card{
+      background:#1b2238;
+      padding:30px;
+      border-radius:16px;
+      flex:1 1 300px;
+      max-width:400px;
+      text-align:center;
+      transition:0.3s;
+      display: flex;
+      flex-direction: column;
+    }
+    .vision-mission .card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 10px 30px rgba(34,211,255,0.3);
+    }
+    .vision-mission .card i{
+      font-size:3rem;
+      color:#22d3ff;
+      margin-bottom:15px;
+    }
+    .vision-mission .card h3{
+      font-size:1.5rem;
+      margin-bottom:10px;
+    }
+    .vision-mission .card p{
+      font-size:1rem;
+      color:#b8c1d9;
+    }
+
+    /* TEAM */
+    .team{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:30px;
+    }
+    .team .member{
+      background:#1b2238;
+      padding:20px;
+      border-radius:16px;
+      text-align:center;
+      flex:1 1 200px;
+      max-width:250px;
+      transition:0.3s;
+    }
+    .team .member:hover{
+      transform:translateY(-8px);
+      box-shadow:0 10px 30px rgba(34,211,255,0.3);
+    }
+    .team .member img{
+      width:120px;
+      height:120px;
+      object-fit:cover;
+      border-radius:50%;
+      margin-bottom:15px;
+    }
+    .team .member i{
+      font-size: 50px;
+      /* width:120px; */
+      /* height:120px; */
+      object-fit:cover;
+      /* border-radius:50%;
+      margin-bottom:15px; */
+    }
+    .team .member h4{
+      font-size:1.2rem;
+      color:#22d3ff;
+      margin-bottom:5px;
+    }
+    .team .member p{
+      font-size:0.95rem;
+      color:#b8c1d9;
+    }
+
+    /* FEATURES / WHY CHOOSE US */
+    .features{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:30px;
+    }
+    .features .feature-card{
+      background:#1b2238;
+      padding:25px;
+      border-radius:16px;
+      text-align:center;
+      flex:1 1 200px;
+      max-width:250px;
+      transition:0.3s;
+    }
+    .features .feature-card:hover{
+      transform:translateY(-8px);
+      box-shadow:0 10px 30px rgba(34,211,255,0.3);
+    }
+    .features .feature-card i{
+      font-size:2.5rem;
+      color:#22d3ff;
+      margin-bottom:12px;
+    }
+    .features .feature-card h4{
+      font-size:1.2rem;
+      margin-bottom:8px;
+    }
+    .features .feature-card p{
+      font-size:0.95rem;
+      color:#b8c1d9;
+    }
+
+    /* CTA */
+    .cta{
+      text-align:center;
+      margin-top:30px;
+    }
+    .cta button{
+      padding:12px 25px;
+      font-size:1rem;
+      font-weight:bold;
+      background:#22d3ff;
+      color:#11162a;
+      border:none;
+      border-radius:10px;
+      cursor:pointer;
+      transition:0.3s;
+    }
+    .cta button:hover{
+      background:#1ab7e3;
+    }
+
+    /* FOOTER */
+    /* footer.site-footer{
+      background:#11162a;
+      color:#b8c1d9;
+      padding:40px 20px;
+    }
+    footer .footer-container{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      gap:20px;
+      max-width:1200px;
+      margin:auto;
+    }
+    footer h4,h3{
+      color:#22d3ff;
+      margin-bottom:15px;
+    }
+    footer p, footer li{
+      font-size:0.95rem;
+      color:#b8c1d9;
+    }
+    footer ul{
+      list-style:none;
+      padding:0;
+    }
+    footer ul li a{
+      color:#b8c1d9;
+      transition:0.3s;
+    }
+    footer ul li a:hover{
+      color:#22d3ff;
+    }
+    .social-icons a{
+      display:inline-block;
+      margin-right:10px;
+      color:#b8c1d9;
+      transition:0.3s;
+      font-size:1.2rem;
+    }
+    .social-icons a:hover{
+      color:#22d3ff;
+    } */
+
+    /* RESPONSIVE */
+    @media(max-width:900px){
+      .vision-mission, .team, .features{
+        flex-direction:column;
+        align-items:center;
+      }
+    }
+  </style> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+<link rel="stylesheet" href="main.css">
+<!-- AOS CSS -->
+<link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+</head>
+<body>
+
+ <!-- NAVBAR -->
+<header class="main-navbar">
+  <!-- LEFT: Logo -->
+  <div class="logo">
+    <img src="images/logo.png" alt="Logo">
+  </div>
+
+  <!-- CENTER: Nav Links -->
+  <nav class="nav-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="product.html">Products</a>
+    <a href="brands.html">Brands</a>
+    <a href="compare.html">Compare</a>
+    <!-- <a href="checkout.html">Check out</a> -->
+    <a href="about.html">About</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+
+  <!-- RIGHT: Icons -->
+  <div class="nav-icons">
+    <!-- SEARCH -->
+    <div class="search-wrapper">
+      <i class="fa-solid fa-magnifying-glass search-icon"></i>
+      <input type="text" placeholder="Search products..." id="searchInput" class="search-input">
+      <div class="search-dropdown" id="searchDropdown"></div>
+    </div>
+
+    <!-- HEART / Wishlist -->
+    <div class="icon-wrapper">
+      <i class="fa-regular fa-heart heart-icon"></i>
+      <span class="nav-badge heart-count">0</span>
+    </div>
+
+    <!-- CART -->
+    <div class="icon-wrapper">
+      <i class="fa-solid fa-cart-shopping cart-icon"></i>
+      <span class="nav-badge cart-count">0</span>
+    </div>
+
+   
+
+    <span class="login" id="loginBtn">
+      <i class="fa-solid fa-circle-user"></i>
+      <span id="login-name">My Account</span>
+    </span>
+    <span id="logoutBtn" style="cursor: pointer; "> <i class="fas fa-sign-out"></i></span>
+
+    <!-- MOBILE TOGGLE -->
+  </div>
+  <i class="fa-solid fa-bars mobile-toggle"></i>
+</header>
+
+<!-- ✅ MOBILE MENU (NEW) -->
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <!-- Close button -->
+  <i class="fa-solid fa-xmark close-mobile" id="closeMobile"></i>
+
+  <!-- Top: Profile + Search -->
+  <div class="mobile-top">
+    <div class="mobile-profile">
+      <!-- <i class="fa-solid fa-circle-user"></i>
+      <span id="login-name">My Account</span> -->
+      <span class="mobile-login" id="mobileLoginBtn">
+        <i class="fa-solid fa-circle-user"></i>
+        <span class="mobile-login-name">My Account</span>
+      </span>
+      </span>
+    </div>
+    
+    <div class="mobile-search">
+      <input type="text" placeholder="Search products...">
+      <i class="fa-solid fa-magnifying-glass"></i>
+    </div>
+  </div>
+
+  <!-- Nav Links -->
+  <nav class="mobile-links">
+    <a href="index.html" class="active">Home</a>
+    <a href="product.html">Products</a>
+    <a href="compare.html">Compare</a>
+    <a href="About">Check out</a>
+    <a href="contactus.html">Contact</a>
+  </nav>
+
+  <!-- Bottom: Logout -->
+  <div class="mobile-logout">
+    <i class="fas fa-sign-out"></i>
+    <span>Logout</span>
+  </div>
+</div>
+
+
+  <!-- HERO -->
+  <div class="container about-hero"  data-aos="fade-up">
+    <h1>About GearNix</h1>
+    <p>Your ultimate destination for gaming gear and tech. Quality products, fast delivery, and trusted by gamers worldwide.</p>
+  </div>
+
+  <!-- OUR STORY -->
+  <section class="container"  data-aos="fade-up" >
+    <h2>Our Story</h2>
+    <p>GearNix was founded to provide gamers and tech enthusiasts with the best gear at affordable prices. Our mission is to combine quality, speed, and trust in every product we deliver.</p>
+  </section>
+
+  <!-- VISION & MISSION -->
+  <section class="container"  data-aos="fade-up">
+    <h2>Vision & Mission</h2>
+    <div class="vision-mission">
+      <div class="card">
+        <i class="fas fa-eye"></i>
+        <h3>Our Vision</h3>
+        <p>To become the most trusted online destination for gaming and tech enthusiasts worldwide.</p>
+      </div>
+      <div class="card">
+        <i class="fas fa-bullseye"></i>
+        <h3>Our Mission</h3>
+        <p>Deliver high-quality products, provide excellent service, and build a community of tech enthusiasts.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="container"  data-aos="fade-up">
+    <h2>Meet the Team</h2>
+    <div class="team">
+      <div class="member"  data-aos="fade-up">
+         <i class="fa-solid fa-circle-user"></i>
+        <!-- <img src="review.jpg" alt="Founder 1"> -->
+        <h4>Talha Khan</h4>
+        <p>Founder & CEO</p>
+      </div>
+      <div class="member"  data-aos="fade-up">
+         <i class="fa-solid fa-circle-user"></i>
+        <!-- <img src="review1.jpg" alt="Co-Founder"> -->
+        <h4>Faiz</h4>
+        <p>Co-Founder & CTO</p>
+      </div>
+      <div class="member"  data-aos="fade-up">
+        <!-- <img src="review2.jpg" alt="Marketing"> -->
+        <i class="fa-solid fa-circle-user"></i>
+        <h4>Hadi</h4>
+        <p>Marketing Head</p>
+      </div>
+      <div class="member"  data-aos="fade-up">
+        <!-- <img src="review2.jpg" alt="Marketing"> -->
+        <i class="fa-solid fa-circle-user"></i>
+        <h4>Yarukh</h4>
+        <p>Marketing Head</p>
+      </div>
+      <div class="member"  data-aos="fade-up">
+        <!-- <img src="review2.jpg" alt="Marketing"> -->
+        <i class="fa-solid fa-circle-user"></i>
+        <h4>Ali Raza</h4>
+        <p>Marketing Head</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="container"  data-aos="fade-up">
+    <h2>Why Choose Us</h2>
+    <div class="features">
+      <div class="feature-card"  data-aos="fade-up">
+        <i class="fas fa-shield-alt"></i>
+        <h4>Quality Products</h4>
+        <p>All our products are tested for reliability and performance.</p>
+      </div>
+      <div class="feature-card"  data-aos="fade-up">
+        <i class="fas fa-truck"></i>
+        <h4>Fast Shipping</h4>
+        <p>We ensure quick delivery right to your doorstep.</p>
+      </div>
+      <div class="feature-card"  data-aos="fade-up">
+        <i class="fas fa-headset"></i>
+        <h4>24/7 Support</h4>
+        <p>Our support team is available around the clock.</p>
+      </div>
+      <div class="feature-card"  data-aos="fade-up">
+        <i class="fas fa-users"></i>
+        <h4>Trusted by Gamers</h4>
+        <p>We are loved by thousands of gaming enthusiasts worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <!-- <div class="container cta">
+    <button onclick="window.location.href='index.html'">Shop Now</button>
+  </div> -->
+
+  <!-- FOOTER -->
+  <!-- <section class="section" style="padding:50px 20px; background:#0f1424;"> -->
+    <h2 style="color:#22d3ff; text-align:center; font-size:2.2rem; margin-bottom:20px;">Frequently Asked Questions (FAQs)</h2>
+  
+    <!-- Search -->
+    <div style="max-width:600px; margin:0 auto 40px auto; display:flex;">
+      <input type="text" id="faqSearch" placeholder="Search FAQs..." style="flex:1; padding:10px 15px; border-radius:12px 0 0 12px; border:none; font-size:1rem; background:#1b2238; color:#fff;">
+      <button id="faqSearchBtn" style="padding:10px 15px; background:#22d3ff; border:none; cursor:pointer; border-radius:0 12px 12px 0; color:#11162a; font-weight:bold;"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+  
+    <!-- FAQ container -->
+    <div  data-aos="fade-up" class="faq-container" style="max-width:800px; margin:auto; padding-bottom: 100px;"></div>
+  <!-- </section> -->
+  <footer class="site-footer">
+
+    <div class="footer-container">
+  
+      <!-- ABOUT -->
+      <div class="footer-col about">
+        <img src="images/logo.png" alt="">
+
+        <p>Your ultimate destination for gaming gear and tech. Quality products, fast delivery, and trusted by gamers worldwide.</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+  
+        <div class="newsletter">
+          <button onclick="window.location.href='mailto:support@gearnix.com?subject=Newsletter Subscription&body=I want to subscribe to GearNix newsletter';">
+            Subscribe via Email
+          </button>
+        </div>
+      </div>
+  
+      <!-- QUICK LINKS -->
+      <div class="footer-col links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="product.html">Product</a></li>
+          <li><a href="brands.html">Brand</a></li>
+          <li><a href="compare.html">Comapre</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- CUSTOMER SERVICE -->
+      <div class="footer-col support">
+        <h4>Customer Service</h4>
+        <ul>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Warranty</a></li>
+          <li><a href="#">Order Tracking</a></li>
+        </ul>
+      </div>
+  
+      <!-- CONTACT -->
+      <div class="footer-col contact">
+        <h4>Contact Us</h4>
+        <p>Email: support@gearnix.com</p>
+        <p>Phone: +92 300 1234567</p>
+        <p>Address: Karachi, Pakistan</p>
+      </div>
+  
+    </div>
+  
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+      <p>&copy; 2026 GearNix. All rights reserved.</p>
+    </div>
+  
+  </footer>
+
+  <!-- AOS JS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init({
+  duration: 1000,   // animation speed
+  once: true        // ek hi baar animate hoga
+});
+</script>
+  
+  <script>
+
+      // Navbar link active toggle
+  const navLinks = document.querySelectorAll(".nav-links a");
+const currentPath = window.location.pathname.split("/").pop(); // current page file
+
+navLinks.forEach(link => {
+    const linkPath = link.getAttribute("href");
+    if(linkPath === currentPath){
+        link.classList.add("active");
+    } else {
+        link.classList.remove("active");
+    }
+});
+
+
+// toogle
+const mobileToggle = document.querySelector(".mobile-toggle");
+const mobileMenu = document.getElementById("mobileMenu");
+const closeMobile = document.getElementById("closeMobile");
+
+// Open mobile menu
+mobileToggle.addEventListener("click", () => {
+  mobileMenu.classList.add("active");
+});
+
+// Close mobile menu
+closeMobile.addEventListener("click", () => {
+  mobileMenu.classList.remove("active");
+});
+
+// Optional: click outside menu to close
+window.addEventListener("click", (e) => {
+  if (mobileMenu.classList.contains("active") && !mobileMenu.contains(e.target) && e.target !== mobileToggle) {
+    mobileMenu.classList.remove("active");
+  }
+});
+// Auto-close mobile menu on screen resize
+window.addEventListener("resize", () => {
+    if (window.innerWidth > 900 && mobileMenu.classList.contains("active")) {
+        mobileMenu.classList.remove("active");
+    }
+});
+// 
+
+
+// ==========================
+// 3️⃣ Wishlist / Heart
+// ==========================
+document.querySelectorAll(".heart-icon").forEach(icon => {
+    icon.addEventListener("click", () => {
+        if (!checkLogin()) return;
+        const productCard = icon.closest(".product-card");
+        const id = productCard.dataset.id;
+        const wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+        if (icon.classList.contains("active")) {
+            icon.classList.remove("active", "fa-solid");
+            icon.classList.add("fa-regular");
+            localStorage.setItem("wishlist", JSON.stringify(wishlist.filter(p => p.id != id)));
+        } else {
+            icon.classList.add("active", "fa-solid");
+            icon.classList.remove("fa-regular");
+            wishlist.push({ id, name: productCard.querySelector(".product-name").innerText });
+            localStorage.setItem("wishlist", JSON.stringify(wishlist));
+        }
+        document.querySelector(".heart-count").innerText = JSON.parse(localStorage.getItem("wishlist") || "[]").length;
+    });
+});
+
+
+// ==========================
+// 4️⃣ Cart Button & Count
+// ==========================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+const cartCountEl = document.querySelector(".cart-count");
+
+const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+
+addToCartBtns.forEach(addToCartBtn => {
+
+    addToCartBtn.addEventListener("click", (e) => {
+
+        e.stopPropagation();
+
+        const btn = e.currentTarget;
+        const card = btn.closest(".product-card");
+
+        const productName = card.querySelector(".product-name").innerText;
+
+        // Correct price selector
+        const priceText = card.querySelector(".price").childNodes[0].nodeValue.trim(); // first text node
+        const price = parseFloat(priceText.replace(/[^0-9.]/g, "")) || 0;
+
+        const img = card.querySelector("img").src;
+        const id = card.dataset.id;
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        let product = {
+            id: id,
+            name: productName,
+            price: price,
+            quantity: 1,
+            img: img
+        };
+
+        let exist = cart.find(p => p.id === product.id);
+        if(exist){
+            exist.quantity = Number(exist.quantity || 0) + 1;
+        } else {
+            cart.push(product);
+        }
+
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        // Navbar count update
+        const cartCount = cart.reduce((acc, item) => acc + Number(item.quantity || 0), 0);
+        if(cartCountEl){
+            cartCountEl.innerText = cartCount;
+        }
+
+        // Button animation
+        btn.innerHTML = "✔ Added!";
+        btn.style.background = "#28a745";
+
+        setTimeout(() => {
+            btn.innerHTML = '<i class="fa-solid fa-cart-arrow-down"></i> Add to Cart';
+            btn.style.background = "linear-gradient(45deg,#22d3ff,#1ab7e3)";
+        }, 2500);
+
+        // Notification
+        const notif = document.getElementById("notification");
+        notif.innerText = productName + " added to cart!";
+        notif.style.display = "block";
+        notif.style.opacity = "1";
+        setTimeout(() => {
+            notif.style.opacity = "0";
+            setTimeout(() => (notif.style.display = "none"), 500);
+        }, 2000);
+
+    });
+});
+
+// Page reload par bhi cart count show ho
+function updateCartCount(){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const cartCount = cart.reduce((acc, item) => acc + Number(item.quantity || 0), 0);
+    if(cartCountEl){
+        cartCountEl.innerText = cartCount;
+    }
+}
+
+updateCartCount();
+
+});
+
+// Desktop login elements (agar already nahi hain)
+const loginIcon = document.getElementById("login-name"); // desktop header
+const loginBtn = document.getElementById("loginBtn");
+const logoutBtn = document.getElementById("logoutBtn");
+
+// Mobile login elements
+const mobileLoginIcon = document.querySelector(".mobile-login-name");
+const mobileLoginBtn = document.querySelector(".mobile-login");
+const mobileLogoutBtn = document.querySelector(".mobile-logout");
+
+function updateLogin() {
+    const username = localStorage.getItem("username");
+
+    if (username) {
+        // Desktop
+        loginIcon.innerText = username;
+        loginBtn.style.cursor = "default";
+        loginBtn.onclick = () => alert("Already logged in ✅");
+        if (logoutBtn) logoutBtn.style.display = "inline";
+
+        // Mobile
+        mobileLoginIcon.innerText = username;
+        mobileLoginBtn.style.cursor = "default";
+        mobileLoginBtn.onclick = () => alert("Already logged in ✅");
+        if (mobileLogoutBtn) mobileLogoutBtn.style.display = "flex"; // flex for mobile logout div
+    } else {
+        // Desktop
+        loginIcon.innerText = "Login";
+        loginBtn.style.cursor = "pointer";
+        loginBtn.onclick = () => {
+            sessionStorage.setItem("redirectAfterLogin", window.location.href);
+            window.location.href = "login.html";
+        };
+        if (logoutBtn) logoutBtn.style.display = "none";
+
+        // Mobile
+        mobileLoginIcon.innerText = "Login";
+        mobileLoginBtn.style.cursor = "pointer";
+        mobileLoginBtn.onclick = () => {
+            sessionStorage.setItem("redirectAfterLogin", window.location.href);
+            window.location.href = "login.html";
+        };
+        if (mobileLogoutBtn) mobileLogoutBtn.style.display = "none";
+    }
+}
+
+
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => logoutUser());
+}
+if (mobileLogoutBtn) {
+    mobileLogoutBtn.addEventListener("click", () => logoutUser());
+}
+if (logoutBtn) {
+    logoutBtn.addEventListener("click", () => logoutUser());
+}
+if (mobileLogoutBtn) {
+    mobileLogoutBtn.addEventListener("click", () => logoutUser());
+}
+
+function logoutUser() {
+    localStorage.removeItem("username");
+    localStorage.removeItem("cart");
+    localStorage.removeItem("wishlist");
+    localStorage.removeItem("compare");
+    alert("Logged out successfully!");
+    updateLogin();
+    location.reload();
+}
+
+updateLogin();
+function checkLogin() {
+    if (!localStorage.getItem("username")) {
+        sessionStorage.setItem("redirectAfterLogin", window.location.href);
+        window.location.href = "login.html";
+        return false;
+    }
+    return true;
+}
+
+
+  // ==========================
+// 1️⃣ Search Toggle
+// ==========================
+document.querySelector(".search-icon").addEventListener("click", () => {
+    const wrapper = document.querySelector(".search-wrapper");
+    wrapper.classList.toggle("active");
+    wrapper.querySelector("input").focus();
+});
+
+// ==========================
+// 2️⃣ Mobile Menu Toggle
+// ==========================
+document.querySelector(".mobile-toggle").addEventListener("click", () => {
+    document.querySelector(".nav-links").classList.toggle("active");
+});
+    const faqs = [
+      {
+        question: "What types of products do you sell?",
+        answer: "Liberty Electronics offers a wide range of electronics including smartphones, laptops, accessories, and home electronics from top brands like Samsung, Apple, Huawei, HP, and more.",
+        related: ["How can I order products?", "Can I compare products?"]
+      },
+      {
+        question: "How can I order products?",
+        answer: "You can browse our products on the website, select your desired items, add them to the cart, and proceed to checkout using our secure payment system.",
+        related: ["What types of products do you sell?"]
+      },
+      {
+        question: "Can I compare products?",
+        answer: "Yes! Our website allows you to compare products from different brands to help you make informed decisions based on features, price, and reviews.",
+        related: ["How can I order products?"]
+      },
+      {
+        question: "Do you offer warranty on products?",
+        answer: "All products come with a manufacturer warranty as specified on each product page. Warranty durations vary from 6 months to 2 years depending on the brand.",
+        related: []
+      }
+    ];
+  
+    const faqContainer = document.querySelector(".faq-container");
+  
+    // Render FAQ
+    function renderFAQs(list){
+      faqContainer.innerHTML = "";
+      list.forEach(faq => {
+        const item = document.createElement("div");
+        item.classList.add("faq-item");
+        item.style.cssText = "background:#1b2238; border-radius:12px; margin-bottom:15px; cursor:pointer; padding:15px; display:flex; align-items:center; justify-content:space-between; transition:0.3s;";
+  
+        const question = document.createElement("h4");
+        question.innerText = faq.question;
+        question.style.cssText = "color:#fff; margin:0; flex:1;";
+        item.appendChild(question);
+  
+        const arrow = document.createElement("i");
+        arrow.className = "fa-solid fa-chevron-down";
+        arrow.style.cssText = "color:#22d3ff; transition:0.3s;";
+        item.appendChild(arrow);
+  
+        const answer = document.createElement("p");
+        answer.className = "faq-answer";
+        answer.innerText = faq.answer;
+        answer.style.cssText = "display:none; color:#b8c1d9; margin:10px 0 20px 0; padding-left:10px;";
+  
+        faqContainer.appendChild(item);
+        faqContainer.appendChild(answer);
+  
+        // Click event for FAQ + show related
+        item.addEventListener("click", ()=>{
+          const isOpen = answer.style.display === "block";
+          answer.style.display = isOpen ? "none" : "block";
+          arrow.style.transform = isOpen ? "rotate(0deg)" : "rotate(180deg)";
+  
+          // Remove previous related FAQs if any
+          const relatedEls = faqContainer.querySelectorAll(".related-faq");
+          relatedEls.forEach(el => el.remove());
+  
+          // Show related FAQs if open
+          if(!isOpen && faq.related.length){
+            faq.related.forEach(relQ => {
+              const relFaq = faqs.find(f=>f.question === relQ);
+              if(relFaq){
+                const relDiv = document.createElement("div");
+                relDiv.className = "related-faq";
+                relDiv.style.cssText = "background:#22293f; margin-left:20px; border-radius:10px; padding:10px; color:#b8c1d9; cursor:pointer; display:flex; justify-content:space-between; align-items:center; transition:0.3s; margin-bottom:10px;";
+                relDiv.innerHTML = `<span>${relFaq.question}</span><i class="fa-solid fa-chevron-down" style="color:#22d3ff; transition:0.3s;"></i>`;
+  
+                const relAnswer = document.createElement("p");
+                relAnswer.style.cssText = "display:none; margin-top:5px; color:#b8c1d9; padding-left:10px;";
+                relAnswer.innerText = relFaq.answer;
+  
+                faqContainer.insertBefore(relDiv, answer.nextSibling);
+                faqContainer.insertBefore(relAnswer, relDiv.nextSibling);
+  
+                relDiv.addEventListener("click", ()=>{
+                  const relArrow = relDiv.querySelector("i");
+                  const isOpenRel = relAnswer.style.display === "block";
+                  relAnswer.style.display = isOpenRel ? "none" : "block";
+                  relArrow.style.transform = isOpenRel ? "rotate(0deg)" : "rotate(180deg)";
+                });
+              }
+            });
+          }
+        });
+      });
+    }
+  
+    // Initial render
+    renderFAQs(faqs);
+  
+    // Search functionality
+    document.getElementById("faqSearchBtn").addEventListener("click", ()=>{
+      const val = document.getElementById("faqSearch").value;
+      renderFAQs(faqs.filter(f=>f.question.toLowerCase().includes(val.toLowerCase()) || f.answer.toLowerCase().includes(val.toLowerCase())));
+    });
+    document.getElementById("faqSearch").addEventListener("keyup", ()=>{
+      const val = document.getElementById("faqSearch").value;
+      renderFAQs(faqs.filter(f=>f.question.toLowerCase().includes(val.toLowerCase()) || f.answer.toLowerCase().includes(val.toLowerCase())));
+    });
+  </script>
+  
+
+</body>
+</html>
