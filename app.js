@@ -2,6 +2,27 @@
 // ==========================
 // 0️⃣ Product Filter - Arrival Section
 // ==========================
+// const filterLinks = document.querySelectorAll(".arrival-nav a");
+// const productCards = document.querySelectorAll(".product-card");
+// const heading = document.getElementById("category-heading");
+
+// filterLinks.forEach(link => {
+//   link.addEventListener("click", e => {
+//     e.preventDefault();
+//     const category = link.dataset.category;
+//     const title = link.dataset.title;
+
+//     heading.textContent = title;
+
+//     filterLinks.forEach(l => l.classList.remove("active"));
+//     link.classList.add("active");
+
+//     productCards.forEach(card => {
+//       const cardCat = card.dataset.category;
+//       card.style.display = (category === "all" || cardCat === category) ? "flex" : "none";
+//     });
+//   });
+// });
 const filterLinks = document.querySelectorAll(".arrival-nav a");
 const productCards = document.querySelectorAll(".product-card");
 const heading = document.getElementById("category-heading");
@@ -9,6 +30,8 @@ const heading = document.getElementById("category-heading");
 filterLinks.forEach(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
+    link.blur(); // ✅ focus remove → scroll rokega
+
     const category = link.dataset.category;
     const title = link.dataset.title;
 
@@ -196,6 +219,7 @@ document.addEventListener("DOMContentLoaded",()=>{
   const cartCountEl=document.querySelector(".cart-count");
   document.querySelectorAll(".add-to-cart-btn")?.forEach(btn=>{
     btn.addEventListener("click",(e)=>{
+      if(!checkLogin()) return;
       e.stopPropagation();
       const card=btn.closest(".product-card");
       const name=card.querySelector(".product-name").innerText;
