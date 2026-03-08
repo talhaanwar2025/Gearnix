@@ -67,24 +67,37 @@ function showNotification(message){
 // ==========================
 productCards.forEach(card => {
   card.addEventListener("click", e => {
-    if(e.target.closest(".add-to-cart-btn") || e.target.closest(".heart-icon") || e.target.closest(".compare-icon")) return;
+
+    if(
+      e.target.closest(".add-to-cart-btn") ||
+      e.target.closest(".heart-icon") ||
+      e.target.closest(".compare-icon")
+    ) return;
 
     const productData = {
       id: card.dataset.id,
       name: card.dataset.name,
       desc: card.dataset.desc,
       price: parseFloat(card.dataset.price),
-      img: card.dataset.img,
+
+      img: card.querySelector("img").src,   // ✅ image fix
+
       brand: card.dataset.brand,
       category: card.dataset.category,
       sku: card.dataset.sku,
       warranty: card.dataset.warranty,
-      stock: card.dataset.stock,
+      stock: card.dataset.stock
     };
+
+    console.log(productData); // console me image check karo
+
     sessionStorage.setItem("currentProduct", JSON.stringify(productData));
+
     window.location.href = `product-details1.html?id=${card.dataset.id}`;
   });
 });
+
+
 
 // ==========================
 // 3️⃣ Sample Products Search Dropdown
@@ -212,44 +225,87 @@ document.querySelectorAll(".heart-icon")?.forEach(icon=>{
   });
 });
 
+
 // ==========================
-// 9️⃣ Cart Button & Count
+// 4️⃣ Cart Button & Count
 // ==========================
-document.addEventListener("DOMContentLoaded",()=>{
-  const cartCountEl=document.querySelector(".cart-count");
-  document.querySelectorAll(".add-to-cart-btn")?.forEach(btn=>{
-    btn.addEventListener("click",(e)=>{
+
+document.addEventListener("DOMContentLoaded", () => {
+  localStorage.removeItem("cart");
+  const cartCountEl = document.querySelector(".cart-count");
+  console.log(cartCountEl); // check kare ke ab element mil raha hai
+
+  const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+
+  addToCartBtns.forEach(addToCartBtn => {
+    
+    addToCartBtn.addEventListener("click", (e) => {
+      
       if(!checkLogin()) return;
-      e.stopPropagation();
-      const card=btn.closest(".product-card");
-      const name=card.querySelector(".product-name").innerText;
-      const price=parseFloat(card.querySelector(".current")?.innerText.replace(/[^0-9.]/g,""))||0;
-      const img=card.querySelector("img")?.src;
-      const id=card.dataset.id;
-      let cart=JSON.parse(localStorage.getItem("cart")||"[]");
-      let product={id,name,price,quantity:1,img};
-      let exist=cart.find(p=>p.id===id);
-      if(exist) exist.quantity=(exist.quantity||0)+1; else cart.push(product);
-      localStorage.setItem("cart",JSON.stringify(cart));
-      if(cartCountEl) cartCountEl.innerText=cart.reduce((acc,i)=>acc+Number(i.quantity||0),0);
-      btn.innerHTML="✔ Added!";
-      btn.style.background="#28a745";
-      setTimeout(()=>{ btn.innerHTML='<i class="fa-solid fa-cart-arrow-down"></i> Add to Cart'; btn.style.background="linear-gradient(45deg,#22d3ff,#1ab7e3)"; },2500);
-      showNotification(name+" added to cart");
-    });
+
+          e.stopPropagation();
+
+          const btn = e.currentTarget;
+          const card = btn.closest(".product-card");
+
+          const productName = card.querySelector(".product-name").innerText;
+          const price = parseFloat(card.querySelector(".current").innerText.replace(/[^0-9.]/g, "")) || 0;
+          const img = card.querySelector("img").src;
+          const id = card.dataset.id;
+
+          let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+          let product = {
+              id: id,
+              name: productName,
+              price: price,
+              quantity: 1,
+              img: img
+          };
+
+          let exist = cart.find(p => p.id === product.id);
+          if(exist){
+              exist.quantity = Number(exist.quantity || 0) + 1;
+          } else {
+              cart.push(product);
+          }
+
+          localStorage.setItem("cart", JSON.stringify(cart));
+
+          // Navbar count update
+          const cartCount = cart.reduce((acc, item) => acc + Number(item.quantity || 0), 0);
+          if(cartCountEl){
+            
+              cartCountEl.innerText = cartCount;
+          }
+
+          // Button animation
+          btn.innerHTML = "✔ Added!";
+          btn.style.background = "#28a745";
+
+          setTimeout(() => {
+              btn.innerHTML = '<i class="fa-solid fa-cart-arrow-down"></i> Add to Cart';
+              btn.style.background = "linear-gradient(45deg,#22d3ff,#1ab7e3)";
+          }, 2500);
+
+          showNotification(productName + " added to cart");
+      });
   });
+  
+
+  // Page reload par bhi cart count show ho
+  function updateCartCount(){
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+      const cartCount = cart.reduce((acc, item) => acc + Number(item.quantity || 0), 0);
+
+      if(cartCountEl){
+          cartCountEl.innerText = cartCount;
+      }
+  }
+
+  updateCartCount();
+
 });
-
-// Cart count update function
-function updateCartCount(){
-    const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const total = cart.reduce((acc, item) => acc + item.quantity, 0);
-    document.querySelector(".cart-count").innerText = total;
-}
-
-// Page load pe call karo
-window.addEventListener("load", updateCartCount);
-
 // ==========================
 // 🔟 Hero Slider & Brand Fade
 // ==========================

@@ -281,14 +281,14 @@
             <span>Huawei</span>
           </a>
       
-          <a href="brands.html?brand=Sony" class="brand-card">
+          <a href="brands.html?brand=HP" class="brand-card">
             <div class="brand-logo">
               <img src="images/hp/hp logp.png" alt="Sony">
             </div>
             <span>Hp</span>
           </a>
       
-          <a href="#" class="brand-card">
+          <a href="brands.html?brand=Dell" class="brand-card">
             <div class="brand-logo">
               <img src="images/dell/dell logo.png" alt="Huawei">
             </div>
@@ -1502,7 +1502,7 @@ Added to cart!
 </div>
 
 <script src="app.js"></script>
-<!-- <script src="products.js"></script> -->
+<script src="products.js"></script>
 <!-- AOS JS -->
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
@@ -1814,14 +1814,14 @@ icon.addEventListener("click", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const cartCountEl = document.querySelector(".cart-count");
-    console.log(cartCountEl); // check kare ke ab element mil raha hai
-
-    const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
-
-    addToCartBtns.forEach(addToCartBtn => {
-
-        addToCartBtn.addEventListener("click", (e) => {
+  const cartCountEl = document.querySelector(".cart-count");
+  console.log(cartCountEl); // check kare ke ab element mil raha hai
+  const addToCartBtns = document.querySelectorAll(".add-to-cart-btn");
+  
+  addToCartBtns.forEach(addToCartBtn => {
+    
+    addToCartBtn.addEventListener("click", (e) => {
+          if(!checkLogin()) return;
 
             e.stopPropagation();
 
